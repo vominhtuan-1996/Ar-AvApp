@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xEw-y1-ykd">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Tabbar View Controller-->
+        <scene sceneID="EfI-Mp-9kH">
+            <objects>
+                <tabBarController useStoryboardIdentifierAsRestorationIdentifier="YES" id="xEw-y1-ykd" customClass="CustomTabbarViewController" customModule="MageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3C6-ar-WEs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u55-Tg-Zoe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-332" y="-264"/>
+        </scene>
+        <!--Fashion Home View Controller-->
+        <scene sceneID="ZGk-aF-MUh">
+            <objects>
+                <viewController restorationIdentifier="FashionHomeViewController" storyboardIdentifier="FashionHomeViewController" id="gjm-m6-1Qk" customClass="FashionHomeViewController" customModule="MageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oRY-Yd-106">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aig-9d-djJ">
+                                <rect key="frame" x="0.0" y="113" width="393" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOJ-gN-Hfp">
+                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open Fashion" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FhJ-UV-Wm6">
+                                        <rect key="frame" x="146.66666666666666" y="-6.6666666666666643" width="100" height="57.666666666666664"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="8Jm-2m-132"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="FhJ-UV-Wm6" firstAttribute="centerX" secondItem="aOJ-gN-Hfp" secondAttribute="centerX" id="Cse-ha-UoM"/>
+                                    <constraint firstItem="FhJ-UV-Wm6" firstAttribute="centerY" secondItem="aOJ-gN-Hfp" secondAttribute="centerY" id="rqo-Ew-AMz"/>
+                                    <constraint firstAttribute="height" constant="44" id="sRS-cY-iia"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PfP-g2-sC7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aOJ-gN-Hfp" firstAttribute="top" secondItem="PfP-g2-sC7" secondAttribute="top" id="7vJ-BH-929"/>
+                            <constraint firstItem="PfP-g2-sC7" firstAttribute="trailing" secondItem="aOJ-gN-Hfp" secondAttribute="trailing" id="HFR-p6-toX"/>
+                            <constraint firstItem="aig-9d-djJ" firstAttribute="leading" secondItem="PfP-g2-sC7" secondAttribute="leading" id="Ln9-lB-yjd"/>
+                            <constraint firstItem="aOJ-gN-Hfp" firstAttribute="leading" secondItem="PfP-g2-sC7" secondAttribute="leading" id="NW5-Nc-79a"/>
+                            <constraint firstItem="PfP-g2-sC7" firstAttribute="bottom" secondItem="aig-9d-djJ" secondAttribute="bottom" id="Rq1-p4-Uwd"/>
+                            <constraint firstItem="PfP-g2-sC7" firstAttribute="trailing" secondItem="aig-9d-djJ" secondAttribute="trailing" id="k3U-dn-33B"/>
+                            <constraint firstItem="aig-9d-djJ" firstAttribute="top" secondItem="aOJ-gN-Hfp" secondAttribute="bottom" constant="10" id="u9Z-TJ-uoI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="homeTableView" destination="aig-9d-djJ" id="WWn-45-J7x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXo-ep-OJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426.71755725190837" y="-243.66197183098592"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
