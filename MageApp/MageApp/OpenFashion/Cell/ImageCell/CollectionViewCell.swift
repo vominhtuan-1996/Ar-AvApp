@@ -14,5 +14,10 @@ class CollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+}
 
+extension CollectionViewCell {
+    func calculateHeightCell() -> CGFloat {
+        return 600
+    }
 }

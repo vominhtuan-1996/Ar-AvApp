@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="MenuArrivalItemCell" customModule="MageApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oh3-UT-kam">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="39"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="ZWK-mn-wqA">
+                        <rect key="frame" x="0.0" y="44" width="50" height="6"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="6" id="1wU-3H-hJS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="ZWK-mn-wqA" firstAttribute="top" secondItem="oh3-UT-kam" secondAttribute="bottom" constant="5" id="BPf-fg-Cns"/>
+                <constraint firstItem="oh3-UT-kam" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="INt-Ub-dG2"/>
+                <constraint firstAttribute="bottom" secondItem="ZWK-mn-wqA" secondAttribute="bottom" id="Jug-iB-JAk"/>
+                <constraint firstAttribute="trailing" secondItem="ZWK-mn-wqA" secondAttribute="trailing" id="Knz-JE-vMr"/>
+                <constraint firstAttribute="trailing" secondItem="oh3-UT-kam" secondAttribute="trailing" id="Sey-EI-iWx"/>
+                <constraint firstItem="ZWK-mn-wqA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="fX3-XC-QY9"/>
+                <constraint firstItem="oh3-UT-kam" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jkS-ZK-WBF"/>
+            </constraints>
+            <connections>
+                <outlet property="titlelabel" destination="oh3-UT-kam" id="reH-5a-jWP"/>
+            </connections>
+            <point key="canvasLocation" x="65.648854961832058" y="-11.267605633802818"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_Rectangle" width="6" height="6"/>
+    </resources>
+</document>

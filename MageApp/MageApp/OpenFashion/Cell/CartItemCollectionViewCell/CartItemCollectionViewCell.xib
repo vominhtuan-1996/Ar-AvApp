@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TenorSans-Regular.ttf">
+            <string>TenorSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CartItemCollectionViewCell" customModule="MageApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="280"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="280"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YFW-n7-aji">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="I5s-NJ-Pkv"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4II-uc-Dc7">
+                        <rect key="frame" x="10" y="212" width="180" height="14"/>
+                        <fontDescription key="fontDescription" name="TenorSans" family="Tenor Sans" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLZ-Ae-zhi">
+                        <rect key="frame" x="10" y="252" width="180" height="18"/>
+                        <fontDescription key="fontDescription" name="TenorSans" family="Tenor Sans" pointSize="15"/>
+                        <color key="textColor" red="0.8666666666666667" green="0.52156862745098043" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="YFW-n7-aji" secondAttribute="trailing" id="CMM-XZ-3Jz"/>
+                <constraint firstItem="YFW-n7-aji" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GHh-Z0-l3d"/>
+                <constraint firstItem="4II-uc-Dc7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="KH4-cB-69Z"/>
+                <constraint firstItem="4II-uc-Dc7" firstAttribute="top" secondItem="YFW-n7-aji" secondAttribute="bottom" constant="12" id="MPU-0U-EJ0"/>
+                <constraint firstAttribute="trailing" secondItem="4II-uc-Dc7" secondAttribute="trailing" constant="10" id="Se6-MF-vxK"/>
+                <constraint firstItem="YFW-n7-aji" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Wgw-5M-QoG"/>
+                <constraint firstItem="xLZ-Ae-zhi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="dSv-G2-nGF"/>
+                <constraint firstAttribute="bottom" secondItem="xLZ-Ae-zhi" secondAttribute="bottom" constant="10" id="hke-R1-j8p"/>
+                <constraint firstAttribute="trailing" secondItem="xLZ-Ae-zhi" secondAttribute="trailing" constant="10" id="wbV-h4-SF0"/>
+            </constraints>
+            <connections>
+                <outlet property="cartImageView" destination="YFW-n7-aji" id="Q9N-4j-P23"/>
+                <outlet property="priceLabel" destination="xLZ-Ae-zhi" id="04Y-nU-Jw2"/>
+                <outlet property="titleLabel" destination="4II-uc-Dc7" id="JlM-wZ-1F0"/>
+            </connections>
+            <point key="canvasLocation" x="131" y="-11"/>
+        </collectionViewCell>
+    </objects>
+</document>
