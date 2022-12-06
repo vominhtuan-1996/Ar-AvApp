@@ -50,3 +50,42 @@ extension UIScreen {
         }
     }
 }
+
+extension UIButton {
+    func addRightIcon(image: UIImage) {
+        let imageView = UIImageView(image: image)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(imageView)
+        let length = CGFloat(15)
+        titleEdgeInsets.right += length
+        NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: self.titleLabel!.trailingAnchor, constant: 10),
+            imageView.centerYAnchor.constraint(equalTo: self.titleLabel!.centerYAnchor, constant: 0),
+            imageView.widthAnchor.constraint(equalToConstant: length),
+            imageView.heightAnchor.constraint(equalToConstant: length)
+        ])
+    }
+}
+
+extension String {
+    func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+        return ceil(boundingBox.height)
+    }
+
+    func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
+        let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+
+        return ceil(boundingBox.width)
+    }
+}
+
+extension UIView {
+    func formatBorder(borderWidth : CGFloat, borderColor: UIColor ,cornerRadius: CGFloat)  {
+        self.layer.cornerRadius = cornerRadius;
+        self.layer.borderWidth = borderWidth
+        self.layer.borderColor = borderColor.cgColor
+    }
+}

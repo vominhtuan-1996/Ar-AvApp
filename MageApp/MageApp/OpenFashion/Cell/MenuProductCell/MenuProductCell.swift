@@ -19,8 +19,6 @@ class MenuProductCell: UITableViewCell,UICollectionViewDelegate,UICollectionView
         // Initialization code
     }
     
-    
-    
     func initUImenuArrivalCollectionView() {
         self.menuArrivalCollectionView .registerCell(nibName: "MenuArrivalItemCell")
         self.menuArrivalCollectionView.delegate = self
@@ -33,6 +31,7 @@ class MenuProductCell: UITableViewCell,UICollectionViewDelegate,UICollectionView
         self.cartProductCollectionView .registerCell(nibName: "CartItemCollectionViewCell")
         self.cartProductCollectionView.delegate = self
         self.cartProductCollectionView.dataSource = self
+        self.cartProductCollectionView.bounces = false
         self.cartProductCollectionView .reloadData()
     }
     
@@ -40,7 +39,7 @@ class MenuProductCell: UITableViewCell,UICollectionViewDelegate,UICollectionView
         if (collectionView == self.menuArrivalCollectionView) {
             return lessonTitles.count
         } else if (collectionView == self.cartProductCollectionView) {
-            return 10
+            return 4
         }
         return 0
     }

@@ -25,9 +25,9 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="8fK-Mv-Cnp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JBp-9s-u8v"/>
+                <constraint firstAttribute="bottom" secondItem="8fK-Mv-Cnp" secondAttribute="bottom" id="Woz-tE-gFT"/>
                 <constraint firstAttribute="trailing" secondItem="8fK-Mv-Cnp" secondAttribute="trailing" id="Z2I-if-4AQ"/>
                 <constraint firstItem="8fK-Mv-Cnp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="iDS-Aq-U7M"/>
-                <constraint firstAttribute="bottom" secondItem="8fK-Mv-Cnp" secondAttribute="bottom" id="rjD-W8-MnC"/>
             </constraints>
             <connections>
                 <outlet property="productImageView" destination="8fK-Mv-Cnp" id="rmg-oM-ZAp"/>
@@ -36,6 +36,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Banner.png" width="375" height="600"/>
+        <image name="Banner.png" width="375" height="592"/>
     </resources>
 </document>

@@ -23,13 +23,10 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YFW-n7-aji">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="200" id="I5s-NJ-Pkv"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="224"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4II-uc-Dc7">
-                        <rect key="frame" x="10" y="212" width="180" height="14"/>
+                        <rect key="frame" x="10" y="228" width="180" height="14"/>
                         <fontDescription key="fontDescription" name="TenorSans" family="Tenor Sans" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -47,7 +44,8 @@
                 <constraint firstAttribute="trailing" secondItem="YFW-n7-aji" secondAttribute="trailing" id="CMM-XZ-3Jz"/>
                 <constraint firstItem="YFW-n7-aji" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GHh-Z0-l3d"/>
                 <constraint firstItem="4II-uc-Dc7" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="KH4-cB-69Z"/>
-                <constraint firstItem="4II-uc-Dc7" firstAttribute="top" secondItem="YFW-n7-aji" secondAttribute="bottom" constant="12" id="MPU-0U-EJ0"/>
+                <constraint firstItem="xLZ-Ae-zhi" firstAttribute="top" secondItem="4II-uc-Dc7" secondAttribute="bottom" constant="10" id="LpA-LI-GNW"/>
+                <constraint firstItem="YFW-n7-aji" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.8" id="Ngh-hO-1Nf"/>
                 <constraint firstAttribute="trailing" secondItem="4II-uc-Dc7" secondAttribute="trailing" constant="10" id="Se6-MF-vxK"/>
                 <constraint firstItem="YFW-n7-aji" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Wgw-5M-QoG"/>
                 <constraint firstItem="xLZ-Ae-zhi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="dSv-G2-nGF"/>
