@@ -6,11 +6,16 @@
 //
 
 import UIKit
+import UIView_Shimmer
 
-class TableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class TableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,ShimmeringViewProtocol {
     @IBOutlet weak var imageCollectionView: UICollectionView!
     var collectionView = CollectionViewCell()
-    
+//    var shimmeringAnimatedItems: [UIView] {
+//        [
+//            imageCollectionView
+//        ]
+//    }
     let listDownloadimage = ["https://assets.vogue.in/photos/5f69dc6ca58c74ba85c91d30/master/w_1600,c_limit/shivan%20and%20narresh%20couture.jpeg",
                              "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
                              "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",

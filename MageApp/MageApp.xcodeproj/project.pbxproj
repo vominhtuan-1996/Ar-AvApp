@@ -11,6 +11,7 @@
 		053F243C293EEEE700B90350 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053F243A293EEEE700B90350 /* VideoTableViewCell.xib */; };
 		0543ED36293EDA4B006A3B97 /* CollectionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0543ED34293EDA4B006A3B97 /* CollectionsCell.swift */; };
 		0543ED37293EDA4B006A3B97 /* CollectionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0543ED35293EDA4B006A3B97 /* CollectionsCell.xib */; };
+		054E39E32941853200F2E33E /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054E39E22941853200F2E33E /* HomeModel.swift */; };
 		055D165E29399FA100824475 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D165D29399FA100824475 /* Extention.swift */; };
 		055D16612939D4C200824475 /* FashionHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D16602939D4C200824475 /* FashionHomeViewController.swift */; };
 		055D16642939D5B300824475 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D16632939D5B300824475 /* Logo.png */; };
@@ -31,11 +32,23 @@
 		055D9C1E293DD5F800BE6D8F /* BrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D9C1C293DD5F800BE6D8F /* BrandTableViewCell.swift */; };
 		055D9C1F293DD5F800BE6D8F /* BrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C1D293DD5F800BE6D8F /* BrandTableViewCell.xib */; };
 		055D9C21293DDB6E00BE6D8F /* Boss.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C20293DDB6E00BE6D8F /* Boss.png */; };
-		055D9C24293DDB9500BE6D8F /* Burberry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C23293DDB9500BE6D8F /* Burberry@2x.png */; };
+		055D9C24293DDB9500BE6D8F /* Burberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C23293DDB9500BE6D8F /* Burberry.png */; };
 		055D9C26293DDBB500BE6D8F /* Prada.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C25293DDBB500BE6D8F /* Prada.png */; };
 		055D9C28293DDBC800BE6D8F /* Catier.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C27293DDBC800BE6D8F /* Catier.png */; };
 		055D9C2A293DDBE200BE6D8F /* Gucci.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C29293DDBE200BE6D8F /* Gucci.png */; };
 		055D9C2C293DDBFA00BE6D8F /* Tiffany&Co.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C2B293DDBFA00BE6D8F /* Tiffany&Co.png */; };
+		058320FB2940298600235023 /* OpenFashionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058320F92940298600235023 /* OpenFashionTableViewCell.swift */; };
+		058320FC2940298600235023 /* OpenFashionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058320FA2940298600235023 /* OpenFashionTableViewCell.xib */; };
+		0583210029406D9D00235023 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058320FE29406D9D00235023 /* FollowTableViewCell.swift */; };
+		0583210129406D9D00235023 /* FollowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058320FF29406D9D00235023 /* FollowTableViewCell.xib */; };
+		0583210529406FFE00235023 /* FollowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0583210329406FFE00235023 /* FollowCollectionViewCell.swift */; };
+		0583210629406FFE00235023 /* FollowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0583210429406FFE00235023 /* FollowCollectionViewCell.xib */; };
+		0583210A294072E700235023 /* FooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05832108294072E700235023 /* FooterTableViewCell.swift */; };
+		0583210B294072E700235023 /* FooterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05832109294072E700235023 /* FooterTableViewCell.xib */; };
+		0583210D2940961D00235023 /* MegaHttps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0583210C2940961D00235023 /* MegaHttps.swift */; };
+		058321132940986400235023 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058321122940986400235023 /* BaseResponse.swift */; };
+		058321152940990300235023 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058321142940990300235023 /* Configs.swift */; };
+		058321172940995100235023 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058321162940995100235023 /* APIRouter.swift */; };
 		059DC8882938617700D337DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059DC8872938617700D337DC /* AppDelegate.swift */; };
 		059DC88A2938617700D337DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059DC8892938617700D337DC /* SceneDelegate.swift */; };
 		059DC88F2938617700D337DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059DC88D2938617700D337DC /* Main.storyboard */; };
@@ -72,6 +85,7 @@
 		053F243A293EEEE700B90350 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
 		0543ED34293EDA4B006A3B97 /* CollectionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsCell.swift; sourceTree = "<group>"; };
 		0543ED35293EDA4B006A3B97 /* CollectionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionsCell.xib; sourceTree = "<group>"; };
+		054E39E22941853200F2E33E /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		055D165D29399FA100824475 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		055D16602939D4C200824475 /* FashionHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionHomeViewController.swift; sourceTree = "<group>"; };
 		055D16632939D5B300824475 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
@@ -92,11 +106,23 @@
 		055D9C1C293DD5F800BE6D8F /* BrandTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandTableViewCell.swift; sourceTree = "<group>"; };
 		055D9C1D293DD5F800BE6D8F /* BrandTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandTableViewCell.xib; sourceTree = "<group>"; };
 		055D9C20293DDB6E00BE6D8F /* Boss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boss.png; sourceTree = "<group>"; };
-		055D9C23293DDB9500BE6D8F /* Burberry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Burberry@2x.png"; sourceTree = "<group>"; };
+		055D9C23293DDB9500BE6D8F /* Burberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Burberry.png; sourceTree = "<group>"; };
 		055D9C25293DDBB500BE6D8F /* Prada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prada.png; sourceTree = "<group>"; };
 		055D9C27293DDBC800BE6D8F /* Catier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Catier.png; sourceTree = "<group>"; };
 		055D9C29293DDBE200BE6D8F /* Gucci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gucci.png; sourceTree = "<group>"; };
 		055D9C2B293DDBFA00BE6D8F /* Tiffany&Co.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tiffany&Co.png"; sourceTree = "<group>"; };
+		058320F92940298600235023 /* OpenFashionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFashionTableViewCell.swift; sourceTree = "<group>"; };
+		058320FA2940298600235023 /* OpenFashionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenFashionTableViewCell.xib; sourceTree = "<group>"; };
+		058320FE29406D9D00235023 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
+		058320FF29406D9D00235023 /* FollowTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowTableViewCell.xib; sourceTree = "<group>"; };
+		0583210329406FFE00235023 /* FollowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowCollectionViewCell.swift; sourceTree = "<group>"; };
+		0583210429406FFE00235023 /* FollowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowCollectionViewCell.xib; sourceTree = "<group>"; };
+		05832108294072E700235023 /* FooterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterTableViewCell.swift; sourceTree = "<group>"; };
+		05832109294072E700235023 /* FooterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterTableViewCell.xib; sourceTree = "<group>"; };
+		0583210C2940961D00235023 /* MegaHttps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MegaHttps.swift; sourceTree = "<group>"; };
+		058321122940986400235023 /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		058321142940990300235023 /* Configs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		058321162940995100235023 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		059DC8842938617700D337DC /* MageApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MageApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		059DC8872938617700D337DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		059DC8892938617700D337DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -163,6 +189,14 @@
 			path = Collections;
 			sourceTree = "<group>";
 		};
+		054E39DF294184FB00F2E33E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				054E39E22941853200F2E33E /* HomeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		055D165C29399F2100824475 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +210,7 @@
 		055D165F2939B5B800824475 /* OpenFashion */ = {
 			isa = PBXGroup;
 			children = (
+				054E39DF294184FB00F2E33E /* Model */,
 				055D16652939D86A00824475 /* Cell */,
 				055D16622939D5A800824475 /* Source */,
 				055D16602939D4C200824475 /* FashionHomeViewController.swift */,
@@ -196,6 +231,10 @@
 		055D16652939D86A00824475 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				05832107294072D100235023 /* FooterTableViewCell */,
+				0583210229406FD900235023 /* FolowCollectionViewCell */,
+				058320FD29406D7500235023 /* FollowTableViewCell */,
+				058320F82940295F00235023 /* OpenFashionCell */,
 				05A26BF7293F3B82008C8FD2 /* TitleCollectionViewCell */,
 				05A26BF2293F2A08008C8FD2 /* TrendingCell */,
 				05A26BED293F1E7A008C8FD2 /* ProductCell */,
@@ -266,6 +305,10 @@
 		055D9C10293DC71800BE6D8F /* MGHttp */ = {
 			isa = PBXGroup;
 			children = (
+				058321112940984F00235023 /* BaseResponse */,
+				0583210C2940961D00235023 /* MegaHttps.swift */,
+				058321142940990300235023 /* Configs.swift */,
+				058321162940995100235023 /* APIRouter.swift */,
 			);
 			path = MGHttp;
 			sourceTree = "<group>";
@@ -304,10 +347,54 @@
 				055D9C29293DDBE200BE6D8F /* Gucci.png */,
 				055D9C27293DDBC800BE6D8F /* Catier.png */,
 				055D9C25293DDBB500BE6D8F /* Prada.png */,
-				055D9C23293DDB9500BE6D8F /* Burberry@2x.png */,
+				055D9C23293DDB9500BE6D8F /* Burberry.png */,
 				055D9C20293DDB6E00BE6D8F /* Boss.png */,
 			);
 			path = ImageBrand;
+			sourceTree = "<group>";
+		};
+		058320F82940295F00235023 /* OpenFashionCell */ = {
+			isa = PBXGroup;
+			children = (
+				058320F92940298600235023 /* OpenFashionTableViewCell.swift */,
+				058320FA2940298600235023 /* OpenFashionTableViewCell.xib */,
+			);
+			path = OpenFashionCell;
+			sourceTree = "<group>";
+		};
+		058320FD29406D7500235023 /* FollowTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				058320FE29406D9D00235023 /* FollowTableViewCell.swift */,
+				058320FF29406D9D00235023 /* FollowTableViewCell.xib */,
+			);
+			path = FollowTableViewCell;
+			sourceTree = "<group>";
+		};
+		0583210229406FD900235023 /* FolowCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				0583210329406FFE00235023 /* FollowCollectionViewCell.swift */,
+				0583210429406FFE00235023 /* FollowCollectionViewCell.xib */,
+			);
+			path = FolowCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		05832107294072D100235023 /* FooterTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				05832108294072E700235023 /* FooterTableViewCell.swift */,
+				05832109294072E700235023 /* FooterTableViewCell.xib */,
+			);
+			path = FooterTableViewCell;
+			sourceTree = "<group>";
+		};
+		058321112940984F00235023 /* BaseResponse */ = {
+			isa = PBXGroup;
+			children = (
+				058321122940986400235023 /* BaseResponse.swift */,
+			);
+			path = BaseResponse;
 			sourceTree = "<group>";
 		};
 		059DC87B2938617700D337DC = {
@@ -559,12 +646,14 @@
 				055D9C2C293DDBFA00BE6D8F /* Tiffany&Co.png in Resources */,
 				055D9C0B293D931A00BE6D8F /* MenuArrivalItemCell.xib in Resources */,
 				055D16642939D5B300824475 /* Logo.png in Resources */,
+				0583210B294072E700235023 /* FooterTableViewCell.xib in Resources */,
 				059DC8972938617800D337DC /* LaunchScreen.storyboard in Resources */,
 				05A26BFB293F3BA6008C8FD2 /* TitleCollectionViewCell.xib in Resources */,
 				053F243C293EEEE700B90350 /* VideoTableViewCell.xib in Resources */,
 				055D166A2939F01200824475 /* TableViewCell.xib in Resources */,
+				0583210129406D9D00235023 /* FollowTableViewCell.xib in Resources */,
 				059DC8942938617800D337DC /* Assets.xcassets in Resources */,
-				055D9C24293DDB9500BE6D8F /* Burberry@2x.png in Resources */,
+				055D9C24293DDB9500BE6D8F /* Burberry.png in Resources */,
 				055D9C28293DDBC800BE6D8F /* Catier.png in Resources */,
 				059DC88F2938617700D337DC /* Main.storyboard in Resources */,
 				05A26BF6293F2A29008C8FD2 /* TrendingTableViewCell.xib in Resources */,
@@ -572,8 +661,10 @@
 				055D9C15293DCA0C00BE6D8F /* CartItemCollectionViewCell.xib in Resources */,
 				055D9C19293DCB4100BE6D8F /* TenorSans-Regular.ttf in Resources */,
 				055D9C26293DDBB500BE6D8F /* Prada.png in Resources */,
+				058320FC2940298600235023 /* OpenFashionTableViewCell.xib in Resources */,
 				05A03E6F293893F900F19C0B /* LottieLogo1.json in Resources */,
 				055D9C01293D857100BE6D8F /* Banner.png in Resources */,
+				0583210629406FFE00235023 /* FollowCollectionViewCell.xib in Resources */,
 				055D166F2939F04700824475 /* CollectionViewCell.xib in Resources */,
 				05A03E6E293893F900F19C0B /* IconTransitions.json in Resources */,
 				055D9C1F293DD5F800BE6D8F /* BrandTableViewCell.xib in Resources */,
@@ -638,8 +729,12 @@
 				055D9C0A293D931A00BE6D8F /* MenuArrivalItemCell.swift in Sources */,
 				059DC8882938617700D337DC /* AppDelegate.swift in Sources */,
 				055D9C05293D86DC00BE6D8F /* MenuProductCell.swift in Sources */,
+				058321132940986400235023 /* BaseResponse.swift in Sources */,
 				055D16692939F01200824475 /* TableViewCell.swift in Sources */,
+				058320FB2940298600235023 /* OpenFashionTableViewCell.swift in Sources */,
 				055D16612939D4C200824475 /* FashionHomeViewController.swift in Sources */,
+				0583210529406FFE00235023 /* FollowCollectionViewCell.swift in Sources */,
+				0583210029406D9D00235023 /* FollowTableViewCell.swift in Sources */,
 				059DC88A2938617700D337DC /* SceneDelegate.swift in Sources */,
 				05A26BF0293F1E95008C8FD2 /* ProductTableViewCell.swift in Sources */,
 				05A03E69293893F900F19C0B /* ExampleHighlightableContentView.swift in Sources */,
@@ -654,13 +749,18 @@
 				05A03E4F293892A700F19C0B /* ExampleProvider.swift in Sources */,
 				0543ED36293EDA4B006A3B97 /* CollectionsCell.swift in Sources */,
 				059DC8922938617700D337DC /* MageApp.xcdatamodeld in Sources */,
+				0583210D2940961D00235023 /* MegaHttps.swift in Sources */,
 				05A03E6A293893F900F19C0B /* ExampleBasicContentView.swift in Sources */,
 				05A03E6C293893F900F19C0B /* ExampleAnimateTipsContentView.swift in Sources */,
 				055D9C14293DCA0C00BE6D8F /* CartItemCollectionViewCell.swift in Sources */,
 				05A03E512938931400F19C0B /* ExampleViewController.swift in Sources */,
+				0583210A294072E700235023 /* FooterTableViewCell.swift in Sources */,
+				058321172940995100235023 /* APIRouter.swift in Sources */,
 				05A26BFA293F3BA6008C8FD2 /* TitleCollectionViewCell.swift in Sources */,
+				054E39E32941853200F2E33E /* HomeModel.swift in Sources */,
 				055D9C1E293DD5F800BE6D8F /* BrandTableViewCell.swift in Sources */,
 				053F243B293EEEE700B90350 /* VideoTableViewCell.swift in Sources */,
+				058321152940990300235023 /* Configs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="TenorSans-Regular.ttf">
+            <string>TenorSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FooterTableViewCell" customModule="MageApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="358"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="358"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_camera_ins_black" translatesAutoresizingMaskIntoConstraints="NO" id="vnC-2K-Isq">
+                        <rect key="frame" x="148" y="41" width="24.333333333333343" height="24.333333333333329"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter" translatesAutoresizingMaskIntoConstraints="NO" id="aEo-Hu-Lnj">
+                        <rect key="frame" x="78.666666666666671" y="41" width="24.333333333333329" height="24.333333333333329"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_youtube" translatesAutoresizingMaskIntoConstraints="NO" id="DoF-UN-Z8L">
+                        <rect key="frame" x="217.33333333333334" y="41" width="24.333333333333343" height="24.333333333333329"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator_arrival" translatesAutoresizingMaskIntoConstraints="NO" id="mCa-wh-FSs">
+                        <rect key="frame" x="97.333333333333343" y="89.333333333333329" width="125.33333333333334" height="9.3333333333333286"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc7-ri-ggq">
+                        <rect key="frame" x="89.666666666666686" y="117.66666666666667" width="141" height="46.666666666666671"/>
+                        <attributedString key="attributedText">
+                            <fragment>
+                                <string key="content">support@openui.design
++60 825 876
+</string>
+                                <attributes>
+                                    <font key="NSFont" metaFont="system" size="14"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                            <fragment content="08:00 - 22:00 - Everyday">
+                                <attributes>
+                                    <font key="NSFont" metaFont="system" size="14"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="charWrapping" baseWritingDirection="natural" maximumLineHeight="30" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="separator_arrival" translatesAutoresizingMaskIntoConstraints="NO" id="RWy-TZ-ybW">
+                        <rect key="frame" x="97.333333333333343" y="183.33333333333334" width="125.33333333333334" height="9.3333333333333428"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oI-oD-cNF">
+                        <rect key="frame" x="129.66666666666666" y="224.66666666666666" width="61" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="61" id="Osc-mc-aeB"/>
+                            <constraint firstAttribute="height" constant="30" id="z6u-B5-4Cj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="TenorSans" family="Tenor Sans" pointSize="14"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Contact">
+                            <color key="titleColor" systemColor="labelColor"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpm-NM-EtW">
+                        <rect key="frame" x="30.666666666666671" y="224.66666666666666" width="47" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="47" id="krZ-OB-z6w"/>
+                            <constraint firstAttribute="height" constant="30" id="mPQ-bX-DZu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="TenorSans" family="Tenor Sans" pointSize="14"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="About">
+                            <color key="titleColor" systemColor="labelColor"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCW-GI-ZZg">
+                        <rect key="frame" x="242.66666666666663" y="224.66666666666666" width="47" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="47" id="0Xb-3r-Y3H"/>
+                            <constraint firstAttribute="height" constant="30" id="lsu-IP-DG0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="TenorSans" family="Tenor Sans" pointSize="14"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Blog">
+                            <color key="titleColor" systemColor="labelColor"/>
+                        </state>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KhA-JK-ycP">
+                        <rect key="frame" x="0.0" y="314" width="320" height="44"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright© OpenUI All Rights Reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6q-wR-mOy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <fontDescription key="fontDescription" name="TenorSans" family="Tenor Sans" pointSize="14"/>
+                                <color key="textColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="N6q-wR-mOy" secondAttribute="bottom" id="4Sp-yD-zTp"/>
+                            <constraint firstAttribute="trailing" secondItem="N6q-wR-mOy" secondAttribute="trailing" id="Axo-zM-qJN"/>
+                            <constraint firstItem="N6q-wR-mOy" firstAttribute="top" secondItem="KhA-JK-ycP" secondAttribute="top" id="PAo-hb-FeT"/>
+                            <constraint firstItem="N6q-wR-mOy" firstAttribute="leading" secondItem="KhA-JK-ycP" secondAttribute="leading" id="VBL-Yn-yPM"/>
+                            <constraint firstAttribute="height" constant="44" id="w6b-Gd-aFy"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4oI-oD-cNF" firstAttribute="top" secondItem="RWy-TZ-ybW" secondAttribute="bottom" constant="32" id="0P5-s8-2td"/>
+                    <constraint firstItem="mCa-wh-FSs" firstAttribute="centerX" secondItem="vnC-2K-Isq" secondAttribute="centerX" id="3UE-ZL-jhI"/>
+                    <constraint firstItem="Mc7-ri-ggq" firstAttribute="top" secondItem="mCa-wh-FSs" secondAttribute="bottom" constant="19" id="Ge2-yx-vkz"/>
+                    <constraint firstItem="DoF-UN-Z8L" firstAttribute="centerY" secondItem="vnC-2K-Isq" secondAttribute="centerY" id="HEV-7q-Lwx"/>
+                    <constraint firstItem="Mc7-ri-ggq" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Hx1-pd-DQ4"/>
+                    <constraint firstItem="DoF-UN-Z8L" firstAttribute="leading" secondItem="vnC-2K-Isq" secondAttribute="trailing" constant="45" id="JBJ-EP-YpX"/>
+                    <constraint firstItem="RWy-TZ-ybW" firstAttribute="top" secondItem="Mc7-ri-ggq" secondAttribute="bottom" constant="19" id="N1a-Me-ghh"/>
+                    <constraint firstItem="RWy-TZ-ybW" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="P4M-vQ-rkV"/>
+                    <constraint firstAttribute="trailing" secondItem="KhA-JK-ycP" secondAttribute="trailing" id="QK7-rR-ZM5"/>
+                    <constraint firstItem="zCW-GI-ZZg" firstAttribute="centerY" secondItem="4oI-oD-cNF" secondAttribute="centerY" id="TMC-8L-f2Z"/>
+                    <constraint firstItem="4oI-oD-cNF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Uhn-8A-rS8"/>
+                    <constraint firstItem="fpm-NM-EtW" firstAttribute="centerY" secondItem="4oI-oD-cNF" secondAttribute="centerY" id="Uxa-0w-MVg"/>
+                    <constraint firstItem="KhA-JK-ycP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VIY-iD-sGk"/>
+                    <constraint firstItem="zCW-GI-ZZg" firstAttribute="leading" secondItem="4oI-oD-cNF" secondAttribute="trailing" constant="52" id="Xzk-rY-d9u"/>
+                    <constraint firstItem="vnC-2K-Isq" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Ywq-3q-k9q"/>
+                    <constraint firstItem="4oI-oD-cNF" firstAttribute="leading" secondItem="fpm-NM-EtW" secondAttribute="trailing" constant="52" id="ZgF-hR-1li"/>
+                    <constraint firstItem="aEo-Hu-Lnj" firstAttribute="centerY" secondItem="vnC-2K-Isq" secondAttribute="centerY" id="axf-Ie-JBC"/>
+                    <constraint firstItem="vnC-2K-Isq" firstAttribute="leading" secondItem="aEo-Hu-Lnj" secondAttribute="trailing" constant="45" id="elE-ec-aTJ"/>
+                    <constraint firstAttribute="bottom" secondItem="KhA-JK-ycP" secondAttribute="bottom" id="gfY-nG-2c3"/>
+                    <constraint firstItem="mCa-wh-FSs" firstAttribute="top" secondItem="vnC-2K-Isq" secondAttribute="bottom" constant="24" id="oEq-Pe-DyB"/>
+                    <constraint firstItem="vnC-2K-Isq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="41" id="sWv-Zh-Lk5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="48.854961832061065" y="-11.267605633802818"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Twitter" width="24.333333969116211" height="24.333333969116211"/>
+        <image name="ic_camera_ins_black" width="24.333333969116211" height="24.333333969116211"/>
+        <image name="ic_youtube" width="24.333333969116211" height="24.333333969116211"/>
+        <image name="separator_arrival" width="125.33333587646484" height="9.3333330154418945"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

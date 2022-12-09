@@ -6,12 +6,19 @@
 //
 
 import UIKit
-
-class MenuProductCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+import UIView_Shimmer
+class MenuProductCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,ShimmeringViewProtocol {
     @IBOutlet weak var menuArrivalCollectionView: UICollectionView!
     @IBOutlet weak var loadmoreButton: UIButton!
     @IBOutlet weak var cartProductCollectionView: UICollectionView!
     let lessonTitles = ["All", "Apparel","Dress", "Tshirt","Bag",]
+    var shimmeringAnimatedItems: [UIView] {
+        [
+            menuArrivalCollectionView,
+            loadmoreButton,
+            cartProductCollectionView,
+        ]
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         self .initUIcartProductCollectionView()

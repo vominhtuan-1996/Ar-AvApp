@@ -12,7 +12,6 @@ class RootViewController: UIViewController {
     @IBOutlet weak var tabbarView: ESTabBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.red
 //        self.tabbarView.barStyle = ExampleProvider.customMoreStyle()
         // Do any additional setup after loading the view.
     }
