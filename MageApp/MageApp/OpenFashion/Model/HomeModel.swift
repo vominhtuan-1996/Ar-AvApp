@@ -8,10 +8,10 @@
 import UIKit
 
 struct HomeModel: Decodable {
-    let requestId: String
+    var requestId: String
     var items: [ItemsModel]
-    let count: String
-    let anyKey: String
+    var count: String
+    var anyKey: String
     
     enum ItemsModel:Decodable {
         enum DecodingError: Error {
@@ -25,7 +25,8 @@ struct HomeModel: Decodable {
         case linkVideo(String)
         case listProduct([listProductModel])
         case ListTrending([String])
-        
+        case OpenFashionSlogan(String)
+        case FollowUs([FollowUsModel])
         enum CodingKeys: String, CodingKey {
             case headerImageLink = "headerImageLink"
             case Arrival = "Arrival"
@@ -34,7 +35,8 @@ struct HomeModel: Decodable {
             case linkVideo = "linkVideo"
             case listProduct = "listProduct"
             case ListTrending = "ListTrending"
-            
+            case OpenFashionSlogan = "OpenFashionSlogan"
+            case FollowUs = "FollowUs"
         }
         
         init(from decoder: Decoder) throws {
@@ -68,12 +70,30 @@ struct HomeModel: Decodable {
                 let value = try container.decode([String].self, forKey: .ListTrending)
                 print(value)
                 self = .ListTrending(value)
+            case .OpenFashionSlogan:
+                let value = try container.decode(String.self, forKey: .OpenFashionSlogan)
+                print(value)
+                self = .OpenFashionSlogan(value)
+                
+            case .FollowUs:
+                let value = try container.decode([FollowUsModel].self, forKey: .FollowUs)
+                print(value)
+                self = .FollowUs(value)
             case .none:
                 throw DecodingError.wrongJSON
             }
         }
     }
+    
+    func itemsCount() -> Int {
+        return items.count
+    }
+    
+//    func ReturnHeaderImageLinkModel() -> headerImageLinkModel{
+//        return HomeModel.ItemsModel.headerImageLink([])
+//    }
 }
+
 
 struct headerImageLinkModel:Decodable {
     let link:String
@@ -120,63 +140,8 @@ struct ListTrending:Decodable {
     
 }
 
-struct ID: Decodable {
-    let id: Int
-}
-
-struct Token: Decodable {
-    let token: String
-    let updated: String
-    let created: String
-    let id: Int
-}
-
-struct ServerPublicKey: Decodable {
-    let serverPublicKey: String
-    enum CodingKeys: String, CodingKey {
-        case serverPublicKey = "server_public_key"
-    }
-}
-
-struct Results: Decodable {
-
-    let response: [Response]
-
-    enum CodingKeys: String, CodingKey {
-        case response = "Response"
-    }
-
-    enum Response: Decodable {
-
-        enum DecodingError: Error {
-            case wrongJSON
-        }
-
-        case id(ID)
-        case token(Token)
-        case serverPublicKey(ServerPublicKey)
-
-        enum CodingKeys: String, CodingKey {
-            case id = "Id"
-            case token = "Token"
-            case serverPublicKey = "ServerPublicKey"
-        }
-
-        init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-            switch container.allKeys.first {
-            case .id:
-                let value = try container.decode(ID.self, forKey: .id)
-                self = .id(value)
-            case .token:
-                let value = try container.decode(Token.self, forKey: .token)
-                self = .token(value)
-            case .serverPublicKey:
-                let value = try container.decode(ServerPublicKey.self, forKey: .serverPublicKey)
-                self = .serverPublicKey(value)
-            case .none:
-                throw DecodingError.wrongJSON
-            }
-        }
-    }
+struct FollowUsModel:Decodable {
+    let userId:String
+    let userName:String
+    let avartar:String
 }

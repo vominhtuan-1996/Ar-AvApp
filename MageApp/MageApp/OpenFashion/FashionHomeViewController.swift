@@ -9,8 +9,13 @@ import UIKit
 import SVProgressHUD
 import UIView_Shimmer
 import Alamofire
+
 class FashionHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var homeTableView: UITableView!
+    var homePageModel = HomeModel(requestId: "", items: [], count: "", anyKey: "")
+    var headerImageLink = HomeModel.ItemsModel.headerImageLink([])
+    var arrival = HomeModel.ItemsModel.Arrival(ArrivalModel(Title: "", collectionTitle: [], listProduct: []))
+    var ItemModel = [HomeModel.ItemsModel]()
     private var isLoading = true {
         didSet {
             self.homeTableView.isUserInteractionEnabled = !isLoading
@@ -23,58 +28,30 @@ class FashionHomeViewController: UIViewController,UITableViewDelegate,UITableVie
 //        SVProgressHUD.show();
         isLoading = true
         self .initUITableView()
+        self .fecthData()
+    }
+    
+    // MARK: fecthData
+    
+    func fecthData() {
         let body: [String : Any] = [:]
-       
-            MegaHttps(data: body, url: nil, service: .getDataHomePage, method: .get).executeQuery(){ (result: Result<HomeModel,Error>) in
-                    switch result {
-                    case .success(let result):
-                        print(result.items.count)
-                    case .failure(let error):
-                        print(error)
-                    }
+        MegaHttps(data: body, url: nil, service: .getDataHomePage, method: .get).executeQuery(){ (result: Result<HomeModel,Error>) in
+            switch result {
+            case .success(let result):
+                self.isLoading = false
+                self.homePageModel = result
+                self.ItemModel = result.items
+                self.headerImageLink = self.ItemModel[0]
+                self.homePageModel.items.map { it in
+                    print(HomeModel.ItemsModel.headerImageLink)
                 }
-//        self .testJson()
-    }
-    
-    func testJson()  {
-        let data = """
-            {
-                "Response": [
-                    {
-                        "Id": {
-                            "id": 123456
-                        }
-                    },
-                    {
-                        "Token": {
-                            "token": "myToken",
-                            "updated": "2020-01-11 13:55:43.397764",
-                            "created": "2020-01-11 13:55:43.397764",
-                            "id": 123456
-                        }
-                    },
-                    {
-                        "ServerPublicKey": {
-                            "server_public_key": "some key"
-                        }
-                    }
-                ]
+                self.homeTableView .reloadData()
+            case .failure(let error):
+                print(error)
             }
-        """.data(using: .utf8)!
-        do {
-            let result = try JSONDecoder().decode(Results.self, from: data)
-            print(result)
-        } catch {
-            print(error)
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.isLoading = false
-        }
-    }
     
     func initUITableView(){
         self.homeTableView .registerCell(nibName: "TableViewCell")
@@ -90,11 +67,10 @@ class FashionHomeViewController: UIViewController,UITableViewDelegate,UITableVie
         self.homeTableView.delegate = self;
         self.homeTableView.dataSource = self;
         self.homeTableView.separatorStyle = .none
-        self.homeTableView .reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.homePageModel.itemsCount() + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -102,6 +78,7 @@ class FashionHomeViewController: UIViewController,UITableViewDelegate,UITableVie
         if indexPath.row == 0 {
             self.tableViewCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
             self.tableViewCell.selectionStyle = .none
+//            self.tableViewCell.listDownloadimage = self.headerImageLink
             self.tableViewCell.setTemplateWithSubviews(false)
             return self.tableViewCell
         } else if indexPath.row == 1 {

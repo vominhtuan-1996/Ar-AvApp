@@ -16,10 +16,7 @@ class TableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDa
 //            imageCollectionView
 //        ]
 //    }
-    let listDownloadimage = ["https://assets.vogue.in/photos/5f69dc6ca58c74ba85c91d30/master/w_1600,c_limit/shivan%20and%20narresh%20couture.jpeg",
-                             "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                             "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-                             "https://images.pexels.com/photos/884979/pexels-photo-884979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"]
+    var listDownloadimage:NSMutableArray = []
     override func awakeFromNib() {
         super.awakeFromNib()
         self .initUIimageCollectionView()
@@ -38,7 +35,7 @@ class TableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         self.collectionView = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        self.collectionView .setImageForCellWithLink(link: self.listDownloadimage[indexPath.row])
+        self.collectionView .setImageForCellWithLink(link: self.listDownloadimage[indexPath.row] as! String)
         return self.collectionView
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
