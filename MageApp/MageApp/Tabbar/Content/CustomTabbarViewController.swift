@@ -15,7 +15,7 @@ class CustomTabbarViewController: ESTabBarController, UITabBarControllerDelegate
     }
     func setupUITabbar() {
         let v1 = self .OpenFashionHomeViewControler()
-        let v2 = ExampleViewController()
+        let v2 = ChatGPTViewController()
         let v3 = ExampleViewController()
         let v4 = ExampleViewController()
         let v5 = ExampleViewController()
@@ -31,4 +31,8 @@ class CustomTabbarViewController: ESTabBarController, UITabBarControllerDelegate
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "FashionHomeViewController")
     }
+    
+//    func openChatGPTControler() -> UIViewController {
+//        <#function body#>
+//    }
 }

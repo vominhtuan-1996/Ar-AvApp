@@ -37,6 +37,9 @@
 		055D9C28293DDBC800BE6D8F /* Catier.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C27293DDBC800BE6D8F /* Catier.png */; };
 		055D9C2A293DDBE200BE6D8F /* Gucci.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C29293DDBE200BE6D8F /* Gucci.png */; };
 		055D9C2C293DDBFA00BE6D8F /* Tiffany&Co.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C2B293DDBFA00BE6D8F /* Tiffany&Co.png */; };
+		0561EF7E29529F64006E0BD6 /* ChatGPTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561EF7C29529F64006E0BD6 /* ChatGPTViewController.swift */; };
+		0561EF7F29529F64006E0BD6 /* ChatGPTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561EF7D29529F64006E0BD6 /* ChatGPTViewController.xib */; };
+		0563374A29516D58006E7B36 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0563374929516D58006E7B36 /* OpenAISwift */; };
 		058320FB2940298600235023 /* OpenFashionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058320F92940298600235023 /* OpenFashionTableViewCell.swift */; };
 		058320FC2940298600235023 /* OpenFashionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058320FA2940298600235023 /* OpenFashionTableViewCell.xib */; };
 		0583210029406D9D00235023 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058320FE29406D9D00235023 /* FollowTableViewCell.swift */; };
@@ -111,6 +114,8 @@
 		055D9C27293DDBC800BE6D8F /* Catier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Catier.png; sourceTree = "<group>"; };
 		055D9C29293DDBE200BE6D8F /* Gucci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gucci.png; sourceTree = "<group>"; };
 		055D9C2B293DDBFA00BE6D8F /* Tiffany&Co.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tiffany&Co.png"; sourceTree = "<group>"; };
+		0561EF7C29529F64006E0BD6 /* ChatGPTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewController.swift; sourceTree = "<group>"; };
+		0561EF7D29529F64006E0BD6 /* ChatGPTViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatGPTViewController.xib; sourceTree = "<group>"; };
 		058320F92940298600235023 /* OpenFashionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFashionTableViewCell.swift; sourceTree = "<group>"; };
 		058320FA2940298600235023 /* OpenFashionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenFashionTableViewCell.xib; sourceTree = "<group>"; };
 		058320FE29406D9D00235023 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
@@ -164,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63CF8DAC70D81D371E21D39B /* Pods_MageApp.framework in Frameworks */,
+				0563374A29516D58006E7B36 /* OpenAISwift in Frameworks */,
 				05A03E71293893F900F19C0B /* Lottie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +359,23 @@
 			path = ImageBrand;
 			sourceTree = "<group>";
 		};
+		0561EF7A29529F33006E0BD6 /* CHATGPT */ = {
+			isa = PBXGroup;
+			children = (
+				0561EF7B29529F4C006E0BD6 /* ViewController */,
+			);
+			path = CHATGPT;
+			sourceTree = "<group>";
+		};
+		0561EF7B29529F4C006E0BD6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0561EF7C29529F64006E0BD6 /* ChatGPTViewController.swift */,
+				0561EF7D29529F64006E0BD6 /* ChatGPTViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		058320F82940295F00235023 /* OpenFashionCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +442,7 @@
 		059DC8862938617700D337DC /* MageApp */ = {
 			isa = PBXGroup;
 			children = (
+				0561EF7A29529F33006E0BD6 /* CHATGPT */,
 				055D165F2939B5B800824475 /* OpenFashion */,
 				055D165C29399F2100824475 /* Utilities */,
 				05A03E4D2938926E00F19C0B /* Tabbar */,
@@ -598,6 +622,9 @@
 			dependencies = (
 			);
 			name = MageApp;
+			packageProductDependencies = (
+				0563374929516D58006E7B36 /* OpenAISwift */,
+			);
 			productName = MageApp;
 			productReference = 059DC8842938617700D337DC /* MageApp.app */;
 			productType = "com.apple.product-type.application";
@@ -626,6 +653,9 @@
 				Base,
 			);
 			mainGroup = 059DC87B2938617700D337DC;
+			packageReferences = (
+				0563374829516D58006E7B36 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 059DC8852938617700D337DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -643,6 +673,7 @@
 				055D9C1A293DCB4100BE6D8F /* OFL.txt in Resources */,
 				055D9C06293D86DC00BE6D8F /* MenuProductCell.xib in Resources */,
 				055D9C21293DDB6E00BE6D8F /* Boss.png in Resources */,
+				0561EF7F29529F64006E0BD6 /* ChatGPTViewController.xib in Resources */,
 				055D9C2C293DDBFA00BE6D8F /* Tiffany&Co.png in Resources */,
 				055D9C0B293D931A00BE6D8F /* MenuArrivalItemCell.xib in Resources */,
 				055D16642939D5B300824475 /* Logo.png in Resources */,
@@ -754,6 +785,7 @@
 				05A03E6C293893F900F19C0B /* ExampleAnimateTipsContentView.swift in Sources */,
 				055D9C14293DCA0C00BE6D8F /* CartItemCollectionViewCell.swift in Sources */,
 				05A03E512938931400F19C0B /* ExampleViewController.swift in Sources */,
+				0561EF7E29529F64006E0BD6 /* ChatGPTViewController.swift in Sources */,
 				0583210A294072E700235023 /* FooterTableViewCell.swift in Sources */,
 				058321172940995100235023 /* APIRouter.swift in Sources */,
 				05A26BFA293F3BA6008C8FD2 /* TitleCollectionViewCell.swift in Sources */,
@@ -996,6 +1028,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0563374829516D58006E7B36 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0563374929516D58006E7B36 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0563374829516D58006E7B36 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		059DC8902938617700D337DC /* MageApp.xcdatamodeld */ = {
