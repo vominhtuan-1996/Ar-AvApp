@@ -32,7 +32,7 @@
 		055D9C1E293DD5F800BE6D8F /* BrandTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D9C1C293DD5F800BE6D8F /* BrandTableViewCell.swift */; };
 		055D9C1F293DD5F800BE6D8F /* BrandTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C1D293DD5F800BE6D8F /* BrandTableViewCell.xib */; };
 		055D9C21293DDB6E00BE6D8F /* Boss.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C20293DDB6E00BE6D8F /* Boss.png */; };
-		055D9C24293DDB9500BE6D8F /* Burberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C23293DDB9500BE6D8F /* Burberry.png */; };
+		055D9C24293DDB9500BE6D8F /* Burberry@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C23293DDB9500BE6D8F /* Burberry@2x.png */; };
 		055D9C26293DDBB500BE6D8F /* Prada.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C25293DDBB500BE6D8F /* Prada.png */; };
 		055D9C28293DDBC800BE6D8F /* Catier.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C27293DDBC800BE6D8F /* Catier.png */; };
 		055D9C2A293DDBE200BE6D8F /* Gucci.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C29293DDBE200BE6D8F /* Gucci.png */; };
@@ -80,6 +80,7 @@
 		05A26BF6293F2A29008C8FD2 /* TrendingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A26BF4293F2A29008C8FD2 /* TrendingTableViewCell.xib */; };
 		05A26BFA293F3BA6008C8FD2 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A26BF8293F3BA6008C8FD2 /* TitleCollectionViewCell.swift */; };
 		05A26BFB293F3BA6008C8FD2 /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A26BF9293F3BA6008C8FD2 /* TitleCollectionViewCell.xib */; };
+		05B4C7C0299F30DB00D1DF4D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4C7BF299F30DB00D1DF4D /* HeaderView.swift */; };
 		63CF8DAC70D81D371E21D39B /* Pods_MageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9225823DA8FF1E39E15F2DA /* Pods_MageApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -109,7 +110,7 @@
 		055D9C1C293DD5F800BE6D8F /* BrandTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandTableViewCell.swift; sourceTree = "<group>"; };
 		055D9C1D293DD5F800BE6D8F /* BrandTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BrandTableViewCell.xib; sourceTree = "<group>"; };
 		055D9C20293DDB6E00BE6D8F /* Boss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boss.png; sourceTree = "<group>"; };
-		055D9C23293DDB9500BE6D8F /* Burberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Burberry.png; sourceTree = "<group>"; };
+		055D9C23293DDB9500BE6D8F /* Burberry@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Burberry@2x.png"; sourceTree = "<group>"; };
 		055D9C25293DDBB500BE6D8F /* Prada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Prada.png; sourceTree = "<group>"; };
 		055D9C27293DDBC800BE6D8F /* Catier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Catier.png; sourceTree = "<group>"; };
 		055D9C29293DDBE200BE6D8F /* Gucci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gucci.png; sourceTree = "<group>"; };
@@ -158,6 +159,7 @@
 		05A26BF4293F2A29008C8FD2 /* TrendingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingTableViewCell.xib; sourceTree = "<group>"; };
 		05A26BF8293F3BA6008C8FD2 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		05A26BF9293F3BA6008C8FD2 /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
+		05B4C7BF299F30DB00D1DF4D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		1A9F398263D13AA6A1EDA448 /* Pods-MageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MageApp.debug.xcconfig"; path = "Target Support Files/Pods-MageApp/Pods-MageApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5DD83597858C247ACBB95B7 /* Pods-MageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MageApp.release.xcconfig"; path = "Target Support Files/Pods-MageApp/Pods-MageApp.release.xcconfig"; sourceTree = "<group>"; };
 		B9225823DA8FF1E39E15F2DA /* Pods_MageApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MageApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +208,7 @@
 		055D165C29399F2100824475 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				05B4C7BE299F30C100D1DF4D /* HeaderView */,
 				055D9C16293DCB4100BE6D8F /* Tenor_Sans */,
 				055D9C10293DC71800BE6D8F /* MGHttp */,
 				055D165D29399FA100824475 /* Extention.swift */,
@@ -353,7 +356,7 @@
 				055D9C29293DDBE200BE6D8F /* Gucci.png */,
 				055D9C27293DDBC800BE6D8F /* Catier.png */,
 				055D9C25293DDBB500BE6D8F /* Prada.png */,
-				055D9C23293DDB9500BE6D8F /* Burberry.png */,
+				055D9C23293DDB9500BE6D8F /* Burberry@2x.png */,
 				055D9C20293DDB6E00BE6D8F /* Boss.png */,
 			);
 			path = ImageBrand;
@@ -587,6 +590,14 @@
 			path = TitleCollectionViewCell;
 			sourceTree = "<group>";
 		};
+		05B4C7BE299F30C100D1DF4D /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				05B4C7BF299F30DB00D1DF4D /* HeaderView.swift */,
+			);
+			path = HeaderView;
+			sourceTree = "<group>";
+		};
 		32AF6E3AC169FD0FC5EC9275 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -684,7 +695,7 @@
 				055D166A2939F01200824475 /* TableViewCell.xib in Resources */,
 				0583210129406D9D00235023 /* FollowTableViewCell.xib in Resources */,
 				059DC8942938617800D337DC /* Assets.xcassets in Resources */,
-				055D9C24293DDB9500BE6D8F /* Burberry.png in Resources */,
+				055D9C24293DDB9500BE6D8F /* Burberry@2x.png in Resources */,
 				055D9C28293DDBC800BE6D8F /* Catier.png in Resources */,
 				059DC88F2938617700D337DC /* Main.storyboard in Resources */,
 				05A26BF6293F2A29008C8FD2 /* TrendingTableViewCell.xib in Resources */,
@@ -786,6 +797,7 @@
 				055D9C14293DCA0C00BE6D8F /* CartItemCollectionViewCell.swift in Sources */,
 				05A03E512938931400F19C0B /* ExampleViewController.swift in Sources */,
 				0561EF7E29529F64006E0BD6 /* ChatGPTViewController.swift in Sources */,
+				05B4C7C0299F30DB00D1DF4D /* HeaderView.swift in Sources */,
 				0583210A294072E700235023 /* FooterTableViewCell.swift in Sources */,
 				058321172940995100235023 /* APIRouter.swift in Sources */,
 				05A26BFA293F3BA6008C8FD2 /* TitleCollectionViewCell.swift in Sources */,

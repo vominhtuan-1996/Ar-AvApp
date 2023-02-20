@@ -10,7 +10,7 @@ import UIKit
 class BrandTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var brandCollectionView: UICollectionView!
-    let brandList = ["Prada", "Burberry@2x","Boss", "Catier","Gucci","Tiffany&Co"]
+    var brandList:[ListBrandModel] = []
     override func awakeFromNib() {
         super.awakeFromNib()
         self .initUIbrandCollectionView()
@@ -23,14 +23,19 @@ class BrandTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionV
         self.brandCollectionView .reloadData()
     }
     
+    func setDataForBrandCollectionView(data:[ListBrandModel]) {
+        self.brandList = data
+        self.brandCollectionView .reloadData()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return brandList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let MenuArrivalItemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        MenuArrivalItemCell.productImageView.image  = UIImage.init(named: brandList[indexPath.row])
-        return MenuArrivalItemCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
+        cell.productImageView.image  = UIImage.init(named: brandList[indexPath.row].brandName)
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

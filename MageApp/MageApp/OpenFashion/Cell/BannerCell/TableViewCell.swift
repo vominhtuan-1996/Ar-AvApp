@@ -16,10 +16,15 @@ class TableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDa
 //            imageCollectionView
 //        ]
 //    }
-    var listDownloadimage:NSMutableArray = []
+    var listDownloadimage:[linkImageModel] = []
     override func awakeFromNib() {
         super.awakeFromNib()
         self .initUIimageCollectionView()
+    }
+    
+    func setDataForTableViewCell(listDownloadimage:[linkImageModel]) {
+        self.listDownloadimage = listDownloadimage
+        self.imageCollectionView .reloadData()
     }
 
     func initUIimageCollectionView() {
@@ -35,7 +40,7 @@ class TableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         self.collectionView = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
-        self.collectionView .setImageForCellWithLink(link: self.listDownloadimage[indexPath.row] as! String)
+        self.collectionView .setImageForCellWithLink(link: self.listDownloadimage[indexPath.row].linkImage)
         return self.collectionView
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

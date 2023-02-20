@@ -12,7 +12,10 @@ class CustomTabbarViewController: ESTabBarController, UITabBarControllerDelegate
         super.viewDidLoad()
         self.title = "Example"
         self .setupUITabbar()
+        self .setUpNavigationBar()
     }
+    // MARK:  Function
+    
     func setupUITabbar() {
         let v1 = self .OpenFashionHomeViewControler()
         let v2 = ChatGPTViewController()
@@ -27,6 +30,10 @@ class CustomTabbarViewController: ESTabBarController, UITabBarControllerDelegate
         self.viewControllers = [v1, v2, v3, v4, v5]
     }
 
+    func setUpNavigationBar(){
+        self.navigationController?.title = "Open Fashion"
+    }
+    
     func OpenFashionHomeViewControler() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "FashionHomeViewController")

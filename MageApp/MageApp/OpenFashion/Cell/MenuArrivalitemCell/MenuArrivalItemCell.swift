@@ -9,10 +9,16 @@ import UIKit
 
 class MenuArrivalItemCell: UICollectionViewCell {
 
+    @IBOutlet weak var rectangleImageView: UIImageView!
     @IBOutlet weak var titlelabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func setDataForMenuArrivalItemCell(data:collectionTitleModel) {
+        self.titlelabel.text = data.title
+        self.rectangleImageView.isHidden = !data.selected
     }
 
 }

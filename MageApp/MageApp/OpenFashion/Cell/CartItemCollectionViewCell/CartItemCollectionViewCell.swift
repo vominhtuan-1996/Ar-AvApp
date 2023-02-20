@@ -18,5 +18,11 @@ class CartItemCollectionViewCell: UICollectionViewCell {
         self.cartImageView.sd_setImage(with: URL(string: "https://mondaycareer.com/wp-content/uploads/2020/11/background-%C4%91%E1%BA%B9p-1-1024x768.jpg"), placeholderImage: UIImage(named: "Banner.png"))
 //        self.cartImageView sd
     }
+    
+    func setDataforCartItemCollectionViewCell(data:listProductModel) {
+        self.cartImageView.sd_setImage(with: URL(string:data.linkImage), placeholderImage: UIImage(named: "Banner.png"))
+        self.priceLabel.text = String(format: "$%x", data.Price)
+        self.titleLabel.text = data.Description
+    }
 
 }

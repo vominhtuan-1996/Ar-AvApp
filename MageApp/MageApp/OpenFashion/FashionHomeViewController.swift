@@ -12,10 +12,7 @@ import Alamofire
 
 class FashionHomeViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     @IBOutlet weak var homeTableView: UITableView!
-    var homePageModel = HomeModel(requestId: "", items: [], count: "", anyKey: "")
-    var headerImageLink = HomeModel.ItemsModel.headerImageLink([])
-    var arrival = HomeModel.ItemsModel.Arrival(ArrivalModel(Title: "", collectionTitle: [], listProduct: []))
-    var ItemModel = [HomeModel.ItemsModel]()
+    var homePageModel = HomeModel()
     private var isLoading = true {
         didSet {
             self.homeTableView.isUserInteractionEnabled = !isLoading
@@ -35,20 +32,14 @@ class FashionHomeViewController: UIViewController,UITableViewDelegate,UITableVie
     
     func fecthData() {
         let body: [String : Any] = [:]
-        MegaHttps(data: body, url: nil, service: .getDataHomePage, method: .get).executeQuery(){ (result: Result<HomeModel,Error>) in
-            switch result {
-            case .success(let result):
+        MegaHttps(data: body, url: nil,service: .getDataHomePage,method: .get).executeQuery { errorCode, message, result in
+            if (errorCode == 0) {
+                self.homePageModel = HomeModel() .parseDataForHomeModelWithDictionary(dict: result as! [NSDictionary])
                 self.isLoading = false
-                self.homePageModel = result
-                self.ItemModel = result.items
-                self.headerImageLink = self.ItemModel[0]
-                self.homePageModel.items.map { it in
-                    print(HomeModel.ItemsModel.headerImageLink)
-                }
-                self.homeTableView .reloadData()
-            case .failure(let error):
-                print(error)
             }
+            self.homeTableView .reloadData()
+        } erroreHanders: { error in
+            //
         }
     }
     
@@ -70,24 +61,25 @@ class FashionHomeViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.homePageModel.itemsCount() + 1
+        return self.homePageModel.items.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if indexPath.row == 0 {
-            self.tableViewCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
-            self.tableViewCell.selectionStyle = .none
-//            self.tableViewCell.listDownloadimage = self.headerImageLink
-            self.tableViewCell.setTemplateWithSubviews(false)
-            return self.tableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
+            cell.selectionStyle = .none
+            cell.setDataForTableViewCell(listDownloadimage: self.homePageModel.listObjectBanner)
+            cell.setTemplateWithSubviews(false)
+            return cell
         } else if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MenuProductCell") as! MenuProductCell
+            cell.setDataforMenuProductCell(arrival: self.homePageModel.ArrivalModels)
             cell.selectionStyle = .none
             cell.setTemplateWithSubviews(false)
             return cell
         } else if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BrandTableViewCell") as! BrandTableViewCell
+            cell .setDataForBrandCollectionView(data: self.homePageModel.listBrand)
             cell.selectionStyle = .none
             return cell
         } else if indexPath.row == 3 {

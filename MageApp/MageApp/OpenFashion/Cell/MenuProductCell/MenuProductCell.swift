@@ -11,7 +11,8 @@ class MenuProductCell: UITableViewCell,UICollectionViewDelegate,UICollectionView
     @IBOutlet weak var menuArrivalCollectionView: UICollectionView!
     @IBOutlet weak var loadmoreButton: UIButton!
     @IBOutlet weak var cartProductCollectionView: UICollectionView!
-    let lessonTitles = ["All", "Apparel","Dress", "Tshirt","Bag",]
+    var lessonTitles:[collectionTitleModel] = []
+    var arrival:ArrivalModel = ArrivalModel()
     var shimmeringAnimatedItems: [UIView] {
         [
             menuArrivalCollectionView,
@@ -42,23 +43,31 @@ class MenuProductCell: UITableViewCell,UICollectionViewDelegate,UICollectionView
         self.cartProductCollectionView .reloadData()
     }
     
+    func setDataforMenuProductCell(arrival:ArrivalModel) {
+        self.arrival = arrival
+        self.lessonTitles = arrival.collectionTitle
+        self.menuArrivalCollectionView .reloadData()
+        self.cartProductCollectionView .reloadData()
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (collectionView == self.menuArrivalCollectionView) {
-            return lessonTitles.count
+            return self.lessonTitles.count
         } else if (collectionView == self.cartProductCollectionView) {
-            return 4
+            return self.arrival.cartItem.count
         }
         return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if (collectionView == self.menuArrivalCollectionView) {
-            let MenuArrivalItemCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuArrivalItemCell", for: indexPath) as! MenuArrivalItemCell
-            MenuArrivalItemCell.titlelabel.text  = lessonTitles[indexPath.row]
-            return MenuArrivalItemCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuArrivalItemCell", for: indexPath) as! MenuArrivalItemCell
+            cell.setDataForMenuArrivalItemCell(data: self.lessonTitles[indexPath.row])
+            return cell
         } else if (collectionView == self.cartProductCollectionView) {
-            let CartItemCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "CartItemCollectionViewCell", for: indexPath) as! CartItemCollectionViewCell
-            return CartItemCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CartItemCollectionViewCell", for: indexPath) as! CartItemCollectionViewCell
+            cell .setDataforCartItemCollectionViewCell(data: self.arrival.cartItem[indexPath.row])
+            return cell
         }
         return collectionView.dequeueReusableCell(withReuseIdentifier: "MenuArrivalItemCell", for: indexPath) as! MenuArrivalItemCell
     }
@@ -72,7 +81,7 @@ class MenuProductCell: UITableViewCell,UICollectionViewDelegate,UICollectionView
             return size;
         } else if  (collectionView == self.cartProductCollectionView) {
             let w = (Int(collectionView.frame.size.width) - 10) / 2
-            let size = CGSizeMake(CGFloat(w), 280);
+            let size = CGSizeMake(CGFloat(w), 300);
             return size;
         }
         return CGSize.zero

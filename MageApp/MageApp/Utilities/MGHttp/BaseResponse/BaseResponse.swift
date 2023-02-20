@@ -8,24 +8,14 @@
 import Foundation
 import ObjectMapper
 
-class BaseResponse<T: Mappable>: Mappable {
-    var status: String?
-    var code: Int?
+class BaseResponse {
+    var errorCode: Int?
     var message: String?
-    var data: T?
-    
-    required init?(map: Map) {
-    }
-    
-    func mapping(map: Map) {
-        status <- map["status"]
-        code <- map["code"]
-        message <- map["message"]
-        data <- map["data"]
-    }
-    
-    func isSuccessCode() -> Bool? {
-        return code == 200
+    var result: Any
+    init(errorCode: Int? = nil, message: String? = nil, result: Any) {
+        self.errorCode = errorCode
+        self.message = message
+        self.result = result
     }
 }
 

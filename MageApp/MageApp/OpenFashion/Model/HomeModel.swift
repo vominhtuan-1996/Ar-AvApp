@@ -7,122 +7,94 @@
 
 import UIKit
 
-struct HomeModel: Decodable {
-    var requestId: String
-    var items: [ItemsModel]
-    var count: String
-    var anyKey: String
-    
-    enum ItemsModel:Decodable {
-        enum DecodingError: Error {
-            case wrongJSON
-        }
-
-        case headerImageLink([headerImageLinkModel])
-        case Arrival(ArrivalModel)
-        case ListBrand([ListBrandModel])
-        case collections(collectionsModel)
-        case linkVideo(String)
-        case listProduct([listProductModel])
-        case ListTrending([String])
-        case OpenFashionSlogan(String)
-        case FollowUs([FollowUsModel])
-        enum CodingKeys: String, CodingKey {
-            case headerImageLink = "headerImageLink"
-            case Arrival = "Arrival"
-            case ListBrand = "ListBrand"
-            case collections = "collections"
-            case linkVideo = "linkVideo"
-            case listProduct = "listProduct"
-            case ListTrending = "ListTrending"
-            case OpenFashionSlogan = "OpenFashionSlogan"
-            case FollowUs = "FollowUs"
-        }
-        
-        init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-            switch container.allKeys.first {
-            case .headerImageLink:
-                let value = try container.decode([headerImageLinkModel].self, forKey:.headerImageLink)
-                print(value)
-                self = .headerImageLink(value)
-            case .Arrival:
-                let value = try container.decode(ArrivalModel.self, forKey: .Arrival)
-                print(value)
-                self = .Arrival(value)
-            case .ListBrand:
-                let value = try container.decode([ListBrandModel].self, forKey: .ListBrand)
-                print(value)
-                self = .ListBrand(value)
-            case .some(.collections):
-                let value = try container.decode(collectionsModel.self, forKey: .collections)
-                print(value)
-                self = .collections(value)
-            case .some(.linkVideo):
-                let value = try container.decode(String.self, forKey: .linkVideo)
-                print(value)
-                self = .linkVideo(value)
-            case .some(.listProduct):
-                let value = try container.decode([listProductModel].self, forKey: .listProduct)
-                print(value)
-                self = .listProduct(value)
-            case .some(.ListTrending):
-                let value = try container.decode([String].self, forKey: .ListTrending)
-                print(value)
-                self = .ListTrending(value)
-            case .OpenFashionSlogan:
-                let value = try container.decode(String.self, forKey: .OpenFashionSlogan)
-                print(value)
-                self = .OpenFashionSlogan(value)
-                
-            case .FollowUs:
-                let value = try container.decode([FollowUsModel].self, forKey: .FollowUs)
-                print(value)
-                self = .FollowUs(value)
-            case .none:
-                throw DecodingError.wrongJSON
+class HomeModel {
+    var items: [Any] = []
+    var listObjectBanner:[linkImageModel] = []
+    var ArrivalModels:ArrivalModel = ArrivalModel()
+    var listBrand:[ListBrandModel] = []
+    func parseDataForHomeModelWithDictionary(dict:[NSDictionary]) -> HomeModel{
+        let model = HomeModel()
+        for itemmodel:NSDictionary in dict {
+            if itemmodel["listObjectBanner"] != nil {
+                for itemlinkImageModel in itemmodel["listObjectBanner"] as! [Any] {
+                    model.listObjectBanner.append(linkImageModel() .parseDataForlinkImageModelWithDictionary(dict: itemlinkImageModel as! NSDictionary))
+                }
+            } else if itemmodel["listBrand"] != nil {
+                for listBrandItem in itemmodel["listBrand"] as! [Any] {
+                    model.listBrand.append(ListBrandModel() .pareDataListBrandModel(dict: listBrandItem as! NSDictionary))
+                }
+            } else {
+                model.ArrivalModels = ArrivalModel() .parseDataForArrivalModelWithDictionary(dict: itemmodel)
             }
         }
+        model.items = dict
+        return model
     }
+}
+
+class linkImageModel {
+    var linkImage:String = ""
+    func parseDataForlinkImageModelWithDictionary(dict:NSDictionary) -> linkImageModel {
+        let model = linkImageModel()
+        model.linkImage = dict["linkImage"] as! String
+        return model
+    }
+}
+
+class ArrivalModel {
+    var Title: String = ""
+    var collectionTitle: [collectionTitleModel] = []
+    var cartItem: [listProductModel] = []
     
-    func itemsCount() -> Int {
-        return items.count
+    func parseDataForArrivalModelWithDictionary(dict:NSDictionary) -> ArrivalModel {
+        let model = ArrivalModel()
+        model.Title = dict["Title"] as! String
+        for itemlessonTitles in dict["lessonTitles"] as! [NSDictionary] {
+            model.collectionTitle.append(collectionTitleModel() .parseDataForCollectionTitleModel(dict: itemlessonTitles))
+        }
+        for cartItem in dict["cartItem"] as! [NSDictionary] {
+            model.cartItem.append(listProductModel() .pareDataForListProductModel(dict: cartItem))
+        }
+        return model
     }
+}
+
+class collectionTitleModel {
+    var title:String = ""
+    var selected:Bool = true
     
-//    func ReturnHeaderImageLinkModel() -> headerImageLinkModel{
-//        return HomeModel.ItemsModel.headerImageLink([])
-//    }
-}
-
-
-struct headerImageLinkModel:Decodable {
-    let link:String
-}
-
-struct ArrivalModel:Decodable {
-    enum CodingKeys: String, CodingKey {
-        case Title = "Title"
-        case collectionTitle = "collectionTitle"
-        case listProduct = "listProduct"
+    func parseDataForCollectionTitleModel(dict:NSDictionary) -> collectionTitleModel {
+        let model = collectionTitleModel()
+        model.title = dict["title"] as! String
+        model.selected = dict["selected"] as! Bool
+        return model
     }
-    let Title: String
-    let collectionTitle: [collectionTitleModel]
-    let listProduct: [listProductModel]
 }
 
-struct collectionTitleModel:Decodable {
-    let title:String
-    let isSelected:Bool
+class listProductModel {
+    var linkImage:String = ""
+    var Description:String = ""
+    var Price:Int = 0
+    
+    func pareDataForListProductModel(dict:NSDictionary) -> listProductModel {
+        let model = listProductModel()
+        model.linkImage = dict["linkImage"] as! String
+        model.Description = dict["Description"] as! String
+        model.Price = dict["Price"] as! Int
+        return model
+    }
 }
 
-struct listProductModel:Decodable {
-    let linkDownload:String
-    let Description:String
-    let Price:String
-}
-struct ListBrandModel:Decodable {
-    let id:String
-    let brandName:String
+class ListBrandModel {
+    var id:String = ""
+    var brandName:String = ""
+    
+    func pareDataListBrandModel(dict:NSDictionary) -> ListBrandModel {
+        let model = ListBrandModel()
+        model.id = dict["id"] as! String
+        model.brandName = dict["brandName"] as! String
+        return model
+    }
     
 }
 

@@ -42,6 +42,7 @@
                 <constraint firstItem="oh3-UT-kam" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="jkS-ZK-WBF"/>
             </constraints>
             <connections>
+                <outlet property="rectangleImageView" destination="ZWK-mn-wqA" id="yIQ-KI-Wdx"/>
                 <outlet property="titlelabel" destination="oh3-UT-kam" id="reH-5a-jWP"/>
             </connections>
             <point key="canvasLocation" x="65.648854961832058" y="-11.267605633802818"/>
