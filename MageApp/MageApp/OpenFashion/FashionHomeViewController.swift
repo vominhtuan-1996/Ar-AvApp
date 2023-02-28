@@ -84,15 +84,17 @@ class FashionHomeViewController: UIViewController,UITableViewDelegate,UITableVie
             return cell
         } else if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CollectionsCell") as! CollectionsCell
+            cell .setDataForCollectionsCell(data: self.homePageModel.collection)
             cell.selectionStyle = .none
             return cell
         } else if indexPath.row == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "VideoTableViewCell") as! VideoTableViewCell
             cell.selectionStyle = .none
-            cell .initPlayVideo()
+            cell .initPlayVideo(link: self.homePageModel.linkVideo)
             return cell
         } else if indexPath.row == 5 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell") as! ProductTableViewCell
+            cell .setDataForProductTableViewCell(data: self.homePageModel.justForyou)
             cell.selectionStyle = .none
             return cell
         } else if indexPath.row == 6 {

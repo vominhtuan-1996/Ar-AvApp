@@ -12,6 +12,10 @@ class HomeModel {
     var listObjectBanner:[linkImageModel] = []
     var ArrivalModels:ArrivalModel = ArrivalModel()
     var listBrand:[ListBrandModel] = []
+    var collection:collectionsModel = collectionsModel()
+    var linkVideo:String = ""
+    var justForyou = JustForYou()
+    
     func parseDataForHomeModelWithDictionary(dict:[NSDictionary]) -> HomeModel{
         let model = HomeModel()
         for itemmodel:NSDictionary in dict {
@@ -23,6 +27,12 @@ class HomeModel {
                 for listBrandItem in itemmodel["listBrand"] as! [Any] {
                     model.listBrand.append(ListBrandModel() .pareDataListBrandModel(dict: listBrandItem as! NSDictionary))
                 }
+            } else if itemmodel["collection"] != nil {
+                model.collection = collectionsModel() .parseDatacollectionsModel(dict: itemmodel["collection"] as! NSDictionary)
+            } else if itemmodel["linkVideo"] != nil {
+                model.linkVideo = itemmodel["linkVideo"] as! String
+            } else if itemmodel["justforyou"] != nil  {
+                model.justForyou = JustForYou() .parseDataJustForYouModel(dict: itemmodel["justforyou"] as! NSDictionary)
             } else {
                 model.ArrivalModels = ArrivalModel() .parseDataForArrivalModelWithDictionary(dict: itemmodel)
             }
@@ -98,14 +108,42 @@ class ListBrandModel {
     
 }
 
-struct collectionsModel:Decodable {
-    let HeaderImageLink:String
-    let UutumnImageLink:String
+class collectionsModel {
+    var title:String = ""
+    var HeaderImageLink:String = ""
+    var UutumnImageLink:String = ""
     
+    func parseDatacollectionsModel(dict:NSDictionary) -> collectionsModel {
+        let model = collectionsModel()
+        model.title = dict["title"] as! String
+        model.HeaderImageLink = dict["HeaderImageLink"] as! String
+        model.UutumnImageLink = dict["UutumnImageLink"] as! String
+        return model
+    }
 }
 
-struct VideoLink:Decodable {
-    let linkVideo:String
+class VideoLink {
+    var linkVideo:String = ""
+    
+    func parseDataVideoLinkModel(dict:NSDictionary) -> VideoLink {
+        let model = VideoLink()
+        model.linkVideo = dict["linkVideo"] as! String
+        return model
+    }
+}
+
+class JustForYou {
+    var title = ""
+    var item:[listProductModel] = []
+    func parseDataJustForYouModel(dict:NSDictionary) -> JustForYou {
+        let model = JustForYou()
+        model.title = dict["title"] as! String
+        for Item in dict["item"] as! [NSDictionary] {
+            model.item.append(listProductModel() .pareDataForListProductModel(dict: Item))
+        }
+        return model
+    }
+    
 }
 
 struct ListTrending:Decodable {

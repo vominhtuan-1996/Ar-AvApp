@@ -11,6 +11,14 @@
 		053F243C293EEEE700B90350 /* VideoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 053F243A293EEEE700B90350 /* VideoTableViewCell.xib */; };
 		0543ED36293EDA4B006A3B97 /* CollectionsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0543ED34293EDA4B006A3B97 /* CollectionsCell.swift */; };
 		0543ED37293EDA4B006A3B97 /* CollectionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0543ED35293EDA4B006A3B97 /* CollectionsCell.xib */; };
+		054851F729ADDD1C00E1383F /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054851F629ADDD1C00E1383F /* TextManager.swift */; };
+		054851FA29ADDEB700E1383F /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054851F929ADDEB700E1383F /* FocusSquare.swift */; };
+		054851FC29ADE04D00E1383F /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054851FB29ADE04D00E1383F /* FocusSquareSegment.swift */; };
+		054851FF29ADEDD700E1383F /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054851FE29ADEDD700E1383F /* Plane.swift */; };
+		0548520529ADEFC000E1383F /* wood-diffuse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0548520229ADEFC000E1383F /* wood-diffuse.jpg */; };
+		0548520629ADEFC000E1383F /* wood-normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 0548520329ADEFC000E1383F /* wood-normal.png */; };
+		0548520729ADEFC000E1383F /* wood-specular.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0548520429ADEFC000E1383F /* wood-specular.jpg */; };
+		0548520929ADEFE300E1383F /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0548520829ADEFE300E1383F /* Models.scnassets */; };
 		054E39E32941853200F2E33E /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054E39E22941853200F2E33E /* HomeModel.swift */; };
 		055D165E29399FA100824475 /* Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D165D29399FA100824475 /* Extention.swift */; };
 		055D16612939D4C200824475 /* FashionHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055D16602939D4C200824475 /* FashionHomeViewController.swift */; };
@@ -81,6 +89,9 @@
 		05A26BFA293F3BA6008C8FD2 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A26BF8293F3BA6008C8FD2 /* TitleCollectionViewCell.swift */; };
 		05A26BFB293F3BA6008C8FD2 /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05A26BF9293F3BA6008C8FD2 /* TitleCollectionViewCell.xib */; };
 		05B4C7C0299F30DB00D1DF4D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B4C7BF299F30DB00D1DF4D /* HeaderView.swift */; };
+		05B8CCBF29ADAE4F007C3816 /* ARPintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8CCBE29ADAE4F007C3816 /* ARPintViewController.swift */; };
+		05B8CCC229ADB3B4007C3816 /* VirtualObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8CCC129ADB3B4007C3816 /* VirtualObjectManager.swift */; };
+		05B8CCC429ADB470007C3816 /* PointNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8CCC329ADB470007C3816 /* PointNode.swift */; };
 		63CF8DAC70D81D371E21D39B /* Pods_MageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9225823DA8FF1E39E15F2DA /* Pods_MageApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +100,14 @@
 		053F243A293EEEE700B90350 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
 		0543ED34293EDA4B006A3B97 /* CollectionsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsCell.swift; sourceTree = "<group>"; };
 		0543ED35293EDA4B006A3B97 /* CollectionsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionsCell.xib; sourceTree = "<group>"; };
+		054851F629ADDD1C00E1383F /* TextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
+		054851F929ADDEB700E1383F /* FocusSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		054851FB29ADE04D00E1383F /* FocusSquareSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
+		054851FE29ADEDD700E1383F /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		0548520229ADEFC000E1383F /* wood-diffuse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wood-diffuse.jpg"; sourceTree = "<group>"; };
+		0548520329ADEFC000E1383F /* wood-normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wood-normal.png"; sourceTree = "<group>"; };
+		0548520429ADEFC000E1383F /* wood-specular.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "wood-specular.jpg"; sourceTree = "<group>"; };
+		0548520829ADEFE300E1383F /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		054E39E22941853200F2E33E /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		055D165D29399FA100824475 /* Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extention.swift; sourceTree = "<group>"; };
 		055D16602939D4C200824475 /* FashionHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FashionHomeViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +179,9 @@
 		05A26BF8293F3BA6008C8FD2 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		05A26BF9293F3BA6008C8FD2 /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		05B4C7BF299F30DB00D1DF4D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		05B8CCBE29ADAE4F007C3816 /* ARPintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPintViewController.swift; sourceTree = "<group>"; };
+		05B8CCC129ADB3B4007C3816 /* VirtualObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectManager.swift; sourceTree = "<group>"; };
+		05B8CCC329ADB470007C3816 /* PointNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointNode.swift; sourceTree = "<group>"; };
 		1A9F398263D13AA6A1EDA448 /* Pods-MageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MageApp.debug.xcconfig"; path = "Target Support Files/Pods-MageApp/Pods-MageApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5DD83597858C247ACBB95B7 /* Pods-MageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MageApp.release.xcconfig"; path = "Target Support Files/Pods-MageApp/Pods-MageApp.release.xcconfig"; sourceTree = "<group>"; };
 		B9225823DA8FF1E39E15F2DA /* Pods_MageApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MageApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +219,50 @@
 			path = Collections;
 			sourceTree = "<group>";
 		};
+		054851F529ADDD1000E1383F /* TextManager */ = {
+			isa = PBXGroup;
+			children = (
+				054851F629ADDD1C00E1383F /* TextManager.swift */,
+			);
+			path = TextManager;
+			sourceTree = "<group>";
+		};
+		054851F829ADDEA100E1383F /* FocusSquare */ = {
+			isa = PBXGroup;
+			children = (
+				054851F929ADDEB700E1383F /* FocusSquare.swift */,
+				054851FB29ADE04D00E1383F /* FocusSquareSegment.swift */,
+			);
+			path = FocusSquare;
+			sourceTree = "<group>";
+		};
+		054851FD29ADEDD000E1383F /* Plane */ = {
+			isa = PBXGroup;
+			children = (
+				054851FE29ADEDD700E1383F /* Plane.swift */,
+			);
+			path = Plane;
+			sourceTree = "<group>";
+		};
+		0548520029ADEF7900E1383F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0548520829ADEFE300E1383F /* Models.scnassets */,
+				0548520129ADEFC000E1383F /* wood-matrial */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		0548520129ADEFC000E1383F /* wood-matrial */ = {
+			isa = PBXGroup;
+			children = (
+				0548520229ADEFC000E1383F /* wood-diffuse.jpg */,
+				0548520329ADEFC000E1383F /* wood-normal.png */,
+				0548520429ADEFC000E1383F /* wood-specular.jpg */,
+			);
+			path = "wood-matrial";
+			sourceTree = "<group>";
+		};
 		054E39DF294184FB00F2E33E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +274,7 @@
 		055D165C29399F2100824475 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				054851F529ADDD1000E1383F /* TextManager */,
 				05B4C7BE299F30C100D1DF4D /* HeaderView */,
 				055D9C16293DCB4100BE6D8F /* Tenor_Sans */,
 				055D9C10293DC71800BE6D8F /* MGHttp */,
@@ -445,6 +512,7 @@
 		059DC8862938617700D337DC /* MageApp */ = {
 			isa = PBXGroup;
 			children = (
+				05B8CCBD29ADAE38007C3816 /* ARPaint */,
 				0561EF7A29529F33006E0BD6 /* CHATGPT */,
 				055D165F2939B5B800824475 /* OpenFashion */,
 				055D165C29399F2100824475 /* Utilities */,
@@ -453,8 +521,9 @@
 				05A03E482938900600F19C0B /* RootViewController */,
 				059DC8872938617700D337DC /* AppDelegate.swift */,
 				059DC8892938617700D337DC /* SceneDelegate.swift */,
-				059DC8932938617800D337DC /* Assets.xcassets */,
 				059DC8982938617800D337DC /* Info.plist */,
+				059DC8932938617800D337DC /* Assets.xcassets */,
+				0548520029ADEF7900E1383F /* Resource */,
 				059DC8902938617700D337DC /* MageApp.xcdatamodeld */,
 			);
 			path = MageApp;
@@ -598,6 +667,26 @@
 			path = HeaderView;
 			sourceTree = "<group>";
 		};
+		05B8CCBD29ADAE38007C3816 /* ARPaint */ = {
+			isa = PBXGroup;
+			children = (
+				054851FD29ADEDD000E1383F /* Plane */,
+				054851F829ADDEA100E1383F /* FocusSquare */,
+				05B8CCC029ADB0B4007C3816 /* VirtualObjects */,
+				05B8CCBE29ADAE4F007C3816 /* ARPintViewController.swift */,
+			);
+			path = ARPaint;
+			sourceTree = "<group>";
+		};
+		05B8CCC029ADB0B4007C3816 /* VirtualObjects */ = {
+			isa = PBXGroup;
+			children = (
+				05B8CCC129ADB3B4007C3816 /* VirtualObjectManager.swift */,
+				05B8CCC329ADB470007C3816 /* PointNode.swift */,
+			);
+			path = VirtualObjects;
+			sourceTree = "<group>";
+		};
 		32AF6E3AC169FD0FC5EC9275 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -692,7 +781,9 @@
 				059DC8972938617800D337DC /* LaunchScreen.storyboard in Resources */,
 				05A26BFB293F3BA6008C8FD2 /* TitleCollectionViewCell.xib in Resources */,
 				053F243C293EEEE700B90350 /* VideoTableViewCell.xib in Resources */,
+				0548520529ADEFC000E1383F /* wood-diffuse.jpg in Resources */,
 				055D166A2939F01200824475 /* TableViewCell.xib in Resources */,
+				0548520929ADEFE300E1383F /* Models.scnassets in Resources */,
 				0583210129406D9D00235023 /* FollowTableViewCell.xib in Resources */,
 				059DC8942938617800D337DC /* Assets.xcassets in Resources */,
 				055D9C24293DDB9500BE6D8F /* Burberry@2x.png in Resources */,
@@ -703,10 +794,12 @@
 				055D9C15293DCA0C00BE6D8F /* CartItemCollectionViewCell.xib in Resources */,
 				055D9C19293DCB4100BE6D8F /* TenorSans-Regular.ttf in Resources */,
 				055D9C26293DDBB500BE6D8F /* Prada.png in Resources */,
+				0548520729ADEFC000E1383F /* wood-specular.jpg in Resources */,
 				058320FC2940298600235023 /* OpenFashionTableViewCell.xib in Resources */,
 				05A03E6F293893F900F19C0B /* LottieLogo1.json in Resources */,
 				055D9C01293D857100BE6D8F /* Banner.png in Resources */,
 				0583210629406FFE00235023 /* FollowCollectionViewCell.xib in Resources */,
+				0548520629ADEFC000E1383F /* wood-normal.png in Resources */,
 				055D166F2939F04700824475 /* CollectionViewCell.xib in Resources */,
 				05A03E6E293893F900F19C0B /* IconTransitions.json in Resources */,
 				055D9C1F293DD5F800BE6D8F /* BrandTableViewCell.xib in Resources */,
@@ -770,6 +863,7 @@
 				05A26BF5293F2A29008C8FD2 /* TrendingTableViewCell.swift in Sources */,
 				055D9C0A293D931A00BE6D8F /* MenuArrivalItemCell.swift in Sources */,
 				059DC8882938617700D337DC /* AppDelegate.swift in Sources */,
+				05B8CCC429ADB470007C3816 /* PointNode.swift in Sources */,
 				055D9C05293D86DC00BE6D8F /* MenuProductCell.swift in Sources */,
 				058321132940986400235023 /* BaseResponse.swift in Sources */,
 				055D16692939F01200824475 /* TableViewCell.swift in Sources */,
@@ -779,19 +873,24 @@
 				0583210029406D9D00235023 /* FollowTableViewCell.swift in Sources */,
 				059DC88A2938617700D337DC /* SceneDelegate.swift in Sources */,
 				05A26BF0293F1E95008C8FD2 /* ProductTableViewCell.swift in Sources */,
+				054851FC29ADE04D00E1383F /* FocusSquareSegment.swift in Sources */,
 				05A03E69293893F900F19C0B /* ExampleHighlightableContentView.swift in Sources */,
 				05A03E6D293893F900F19C0B /* ExampleTipsContentView.swift in Sources */,
 				05A03E67293893F900F19C0B /* ExampleBackgroundContentView.swift in Sources */,
 				055D166E2939F04700824475 /* CollectionViewCell.swift in Sources */,
 				05A03E70293893F900F19C0B /* ExampleLottieAnimateContentView.swift in Sources */,
+				054851FF29ADEDD700E1383F /* Plane.swift in Sources */,
 				05A03E53293893B800F19C0B /* ExampleNavigationController.swift in Sources */,
 				05A03E6B293893F900F19C0B /* ExampleBouncesContentView.swift in Sources */,
 				055D165E29399FA100824475 /* Extention.swift in Sources */,
 				055D9C0F293DA85C00BE6D8F /* CollectionViewCenteredFlowLayout.swift in Sources */,
+				054851F729ADDD1C00E1383F /* TextManager.swift in Sources */,
 				05A03E4F293892A700F19C0B /* ExampleProvider.swift in Sources */,
+				05B8CCC229ADB3B4007C3816 /* VirtualObjectManager.swift in Sources */,
 				0543ED36293EDA4B006A3B97 /* CollectionsCell.swift in Sources */,
 				059DC8922938617700D337DC /* MageApp.xcdatamodeld in Sources */,
 				0583210D2940961D00235023 /* MegaHttps.swift in Sources */,
+				054851FA29ADDEB700E1383F /* FocusSquare.swift in Sources */,
 				05A03E6A293893F900F19C0B /* ExampleBasicContentView.swift in Sources */,
 				05A03E6C293893F900F19C0B /* ExampleAnimateTipsContentView.swift in Sources */,
 				055D9C14293DCA0C00BE6D8F /* CartItemCollectionViewCell.swift in Sources */,
@@ -802,6 +901,7 @@
 				058321172940995100235023 /* APIRouter.swift in Sources */,
 				05A26BFA293F3BA6008C8FD2 /* TitleCollectionViewCell.swift in Sources */,
 				054E39E32941853200F2E33E /* HomeModel.swift in Sources */,
+				05B8CCBF29ADAE4F007C3816 /* ARPintViewController.swift in Sources */,
 				055D9C1E293DD5F800BE6D8F /* BrandTableViewCell.swift in Sources */,
 				053F243B293EEEE700B90350 /* VideoTableViewCell.swift in Sources */,
 				058321152940990300235023 /* Configs.swift in Sources */,

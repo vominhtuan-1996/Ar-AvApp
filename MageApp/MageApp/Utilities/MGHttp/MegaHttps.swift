@@ -59,6 +59,8 @@ import ObjectMapper
                                 // try to read out a string array
                                 if (self .handerAPI(dict: json["responseResult"] as! NSDictionary)) {
                                     completionHandlers(self.errorCode, self.message,self.result)
+                                } else {
+                                    completionHandlers(self.errorCode, self.message,self.result)
                                 }
                             }
                         } catch let error {

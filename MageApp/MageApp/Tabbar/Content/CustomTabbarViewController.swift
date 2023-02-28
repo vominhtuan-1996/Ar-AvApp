@@ -19,7 +19,7 @@ class CustomTabbarViewController: ESTabBarController, UITabBarControllerDelegate
     func setupUITabbar() {
         let v1 = self .OpenFashionHomeViewControler()
         let v2 = ChatGPTViewController()
-        let v3 = ExampleViewController()
+        let v3 = self .OpenARPintViewController()
         let v4 = ExampleViewController()
         let v5 = ExampleViewController()
         v1.tabBarItem = ESTabBarItem.init(title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
@@ -39,7 +39,8 @@ class CustomTabbarViewController: ESTabBarController, UITabBarControllerDelegate
         return storyboard.instantiateViewController(withIdentifier: "FashionHomeViewController")
     }
     
-//    func openChatGPTControler() -> UIViewController {
-//        <#function body#>
-//    }
+    func OpenARPintViewController() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "ARPintViewController")
+    }
 }

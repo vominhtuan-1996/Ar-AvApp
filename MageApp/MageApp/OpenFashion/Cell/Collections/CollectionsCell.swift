@@ -14,14 +14,12 @@ class CollectionsCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.headerImageView .sd_setImage(with: URL(string: "https://tpny.vn/wp-content/uploads/2021/03/background-dep-danh-cho-may-tinh.jpg"), placeholderImage: UIImage(named: "Banner.png"))
-        self.uutumnImageView .sd_setImage(with: URL(string: "https://tpny.vn/wp-content/uploads/2021/03/Background-dep-thanh-pho.jpg"), placeholderImage: UIImage(named: "Banner.png"))
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+       
     }
     
+    func setDataForCollectionsCell(data:collectionsModel) {
+        self.titleLabel.text = data.title;
+        self.headerImageView .sd_setImage(with: URL(string: data.HeaderImageLink), placeholderImage: UIImage(named: "Banner.png"))
+        self.uutumnImageView .sd_setImage(with: URL(string: data.UutumnImageLink), placeholderImage: UIImage(named: "Banner.png"))
+    }
 }

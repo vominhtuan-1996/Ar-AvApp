@@ -18,8 +18,8 @@ class VideoTableViewCell: UITableViewCell {
         //1. Create a URL
     }
 
-    func initPlayVideo() {
-        if let url = URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4") {
+    func initPlayVideo(link:String) {
+        if let url = URL(string: link) {
             //2. Create AVPlayer object
             let asset = AVAsset(url: url)
             let playerItem = AVPlayerItem(asset: asset)
