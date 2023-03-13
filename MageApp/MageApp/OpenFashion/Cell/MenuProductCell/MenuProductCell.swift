@@ -86,4 +86,27 @@ class MenuProductCell: UITableViewCell,UICollectionViewDelegate,UICollectionView
         }
         return CGSize.zero
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var isReloadData:Bool = false
+        if (collectionView == self.menuArrivalCollectionView) {
+            let model:collectionTitleModel = self.lessonTitles[indexPath.row]
+            if (model.selected) {
+                return
+            } else {
+                model.selected = !model.selected
+                self.lessonTitles.forEach { item in
+                    if (item.title == model.title) {
+                        item.selected = true
+                    } else {
+                        item.selected = false
+                    }
+                }
+                isReloadData = true
+            }
+            if (isReloadData) {
+                collectionView .reloadData()
+            }
+        }
+    }
 }

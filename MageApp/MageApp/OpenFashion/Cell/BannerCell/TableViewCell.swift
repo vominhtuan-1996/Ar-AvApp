@@ -7,6 +7,7 @@
 
 import UIKit
 import UIView_Shimmer
+import AnimatedCollectionViewLayout
 
 class TableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,ShimmeringViewProtocol {
     @IBOutlet weak var imageCollectionView: UICollectionView!
@@ -28,6 +29,10 @@ class TableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDa
     }
 
     func initUIimageCollectionView() {
+        let layout = AnimatedCollectionViewLayout()
+        layout.animator = SnapInAttributesAnimator()
+        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+        self.imageCollectionView.collectionViewLayout = layout
         self.imageCollectionView.delegate = self;
         self.imageCollectionView.dataSource = self;
         self.imageCollectionView .registerCell(nibName: "CollectionViewCell")
@@ -45,6 +50,10 @@ class TableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDa
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width:UIScreen.screenWidth , height: 600)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("index",indexPath.row);
     }
 }
 

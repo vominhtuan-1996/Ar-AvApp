@@ -48,6 +48,10 @@
 		0561EF7E29529F64006E0BD6 /* ChatGPTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561EF7C29529F64006E0BD6 /* ChatGPTViewController.swift */; };
 		0561EF7F29529F64006E0BD6 /* ChatGPTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561EF7D29529F64006E0BD6 /* ChatGPTViewController.xib */; };
 		0563374A29516D58006E7B36 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0563374929516D58006E7B36 /* OpenAISwift */; };
+		0572087529AF3190002FCC48 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0572087429AF318F002FCC48 /* ContactsUI.framework */; };
+		05751C0D29BF033600BF9D15 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05751C0B29BF033600BF9D15 /* MapViewController.swift */; };
+		05751C0E29BF033600BF9D15 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05751C0C29BF033600BF9D15 /* MapViewController.xib */; };
+		05751C1029BF042400BF9D15 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05751C0F29BF042300BF9D15 /* CoreLocation.framework */; };
 		058320FB2940298600235023 /* OpenFashionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058320F92940298600235023 /* OpenFashionTableViewCell.swift */; };
 		058320FC2940298600235023 /* OpenFashionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058320FA2940298600235023 /* OpenFashionTableViewCell.xib */; };
 		0583210029406D9D00235023 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058320FE29406D9D00235023 /* FollowTableViewCell.swift */; };
@@ -95,6 +99,19 @@
 		63CF8DAC70D81D371E21D39B /* Pods_MageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9225823DA8FF1E39E15F2DA /* Pods_MageApp.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		05C577F129BB3CCE001C54DE /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		053F2439293EEEE700B90350 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		053F243A293EEEE700B90350 /* VideoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoTableViewCell.xib; sourceTree = "<group>"; };
@@ -136,6 +153,10 @@
 		055D9C2B293DDBFA00BE6D8F /* Tiffany&Co.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tiffany&Co.png"; sourceTree = "<group>"; };
 		0561EF7C29529F64006E0BD6 /* ChatGPTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewController.swift; sourceTree = "<group>"; };
 		0561EF7D29529F64006E0BD6 /* ChatGPTViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatGPTViewController.xib; sourceTree = "<group>"; };
+		0572087429AF318F002FCC48 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		05751C0B29BF033600BF9D15 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		05751C0C29BF033600BF9D15 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		05751C0F29BF042300BF9D15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		058320F92940298600235023 /* OpenFashionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFashionTableViewCell.swift; sourceTree = "<group>"; };
 		058320FA2940298600235023 /* OpenFashionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenFashionTableViewCell.xib; sourceTree = "<group>"; };
 		058320FE29406D9D00235023 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
@@ -182,6 +203,11 @@
 		05B8CCBE29ADAE4F007C3816 /* ARPintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPintViewController.swift; sourceTree = "<group>"; };
 		05B8CCC129ADB3B4007C3816 /* VirtualObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectManager.swift; sourceTree = "<group>"; };
 		05B8CCC329ADB470007C3816 /* PointNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointNode.swift; sourceTree = "<group>"; };
+		05C577E429BB3CCE001C54DE /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		05C577E629BB3CCE001C54DE /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		05C577E929BB3CCE001C54DE /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		05C577EC29BB3CCE001C54DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		05C577EE29BB3CCE001C54DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A9F398263D13AA6A1EDA448 /* Pods-MageApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MageApp.debug.xcconfig"; path = "Target Support Files/Pods-MageApp/Pods-MageApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B5DD83597858C247ACBB95B7 /* Pods-MageApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MageApp.release.xcconfig"; path = "Target Support Files/Pods-MageApp/Pods-MageApp.release.xcconfig"; sourceTree = "<group>"; };
 		B9225823DA8FF1E39E15F2DA /* Pods_MageApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MageApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -193,6 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				63CF8DAC70D81D371E21D39B /* Pods_MageApp.framework in Frameworks */,
+				05751C1029BF042400BF9D15 /* CoreLocation.framework in Frameworks */,
+				0572087529AF3190002FCC48 /* ContactsUI.framework in Frameworks */,
 				0563374A29516D58006E7B36 /* OpenAISwift in Frameworks */,
 				05A03E71293893F900F19C0B /* Lottie.framework in Frameworks */,
 			);
@@ -446,6 +474,15 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		05751C0A29BF031C00BF9D15 /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				05751C0B29BF033600BF9D15 /* MapViewController.swift */,
+				05751C0C29BF033600BF9D15 /* MapViewController.xib */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
 		058320F82940295F00235023 /* OpenFashionCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +532,7 @@
 			children = (
 				055D9C0C293DA82B00BE6D8F /* Helper */,
 				059DC8862938617700D337DC /* MageApp */,
+				05C577E829BB3CCE001C54DE /* MegaApp */,
 				059DC8852938617700D337DC /* Products */,
 				32AF6E3AC169FD0FC5EC9275 /* Pods */,
 				814A2B92E8FA0425E64BB382 /* Frameworks */,
@@ -512,6 +550,7 @@
 		059DC8862938617700D337DC /* MageApp */ = {
 			isa = PBXGroup;
 			children = (
+				05751C0A29BF031C00BF9D15 /* MapViewController */,
 				05B8CCBD29ADAE38007C3816 /* ARPaint */,
 				0561EF7A29529F33006E0BD6 /* CHATGPT */,
 				055D165F2939B5B800824475 /* OpenFashion */,
@@ -687,6 +726,16 @@
 			path = VirtualObjects;
 			sourceTree = "<group>";
 		};
+		05C577E829BB3CCE001C54DE /* MegaApp */ = {
+			isa = PBXGroup;
+			children = (
+				05C577E929BB3CCE001C54DE /* NotificationViewController.swift */,
+				05C577EB29BB3CCE001C54DE /* MainInterface.storyboard */,
+				05C577EE29BB3CCE001C54DE /* Info.plist */,
+			);
+			path = MegaApp;
+			sourceTree = "<group>";
+		};
 		32AF6E3AC169FD0FC5EC9275 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,7 +748,11 @@
 		814A2B92E8FA0425E64BB382 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				05751C0F29BF042300BF9D15 /* CoreLocation.framework */,
+				0572087429AF318F002FCC48 /* ContactsUI.framework */,
 				B9225823DA8FF1E39E15F2DA /* Pods_MageApp.framework */,
+				05C577E429BB3CCE001C54DE /* UserNotifications.framework */,
+				05C577E629BB3CCE001C54DE /* UserNotificationsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -716,6 +769,8 @@
 				059DC8812938617700D337DC /* Frameworks */,
 				059DC8822938617700D337DC /* Resources */,
 				B3BAEA6A88EFC2EB988F048B /* [CP] Embed Pods Frameworks */,
+				05C577F129BB3CCE001C54DE /* Embed Foundation Extensions */,
+				A69CF069CFB0B5267EBEFAA0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -736,7 +791,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1410;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					059DC8832938617700D337DC = {
@@ -801,6 +856,7 @@
 				0583210629406FFE00235023 /* FollowCollectionViewCell.xib in Resources */,
 				0548520629ADEFC000E1383F /* wood-normal.png in Resources */,
 				055D166F2939F04700824475 /* CollectionViewCell.xib in Resources */,
+				05751C0E29BF033600BF9D15 /* MapViewController.xib in Resources */,
 				05A03E6E293893F900F19C0B /* IconTransitions.json in Resources */,
 				055D9C1F293DD5F800BE6D8F /* BrandTableViewCell.xib in Resources */,
 				055D9C2A293DDBE200BE6D8F /* Gucci.png in Resources */,
@@ -831,6 +887,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A69CF069CFB0B5267EBEFAA0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MageApp/Pods-MageApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MageApp/Pods-MageApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MageApp/Pods-MageApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B3BAEA6A88EFC2EB988F048B /* [CP] Embed Pods Frameworks */ = {
@@ -891,6 +964,7 @@
 				059DC8922938617700D337DC /* MageApp.xcdatamodeld in Sources */,
 				0583210D2940961D00235023 /* MegaHttps.swift in Sources */,
 				054851FA29ADDEB700E1383F /* FocusSquare.swift in Sources */,
+				05751C0D29BF033600BF9D15 /* MapViewController.swift in Sources */,
 				05A03E6A293893F900F19C0B /* ExampleBasicContentView.swift in Sources */,
 				05A03E6C293893F900F19C0B /* ExampleAnimateTipsContentView.swift in Sources */,
 				055D9C14293DCA0C00BE6D8F /* CartItemCollectionViewCell.swift in Sources */,
@@ -925,6 +999,14 @@
 				059DC8962938617800D337DC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		05C577EB29BB3CCE001C54DE /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05C577EC29BB3CCE001C54DE /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -980,7 +1062,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1034,9 +1116,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -1048,8 +1131,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A9F398263D13AA6A1EDA448 /* Pods-MageApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7755R4CX4U;
@@ -1072,6 +1157,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Ftel.Su12.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -1085,8 +1171,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B5DD83597858C247ACBB95B7 /* Pods-MageApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7755R4CX4U;

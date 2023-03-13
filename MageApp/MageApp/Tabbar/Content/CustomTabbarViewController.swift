@@ -20,7 +20,7 @@ class CustomTabbarViewController: ESTabBarController, UITabBarControllerDelegate
         let v1 = self .OpenFashionHomeViewControler()
         let v2 = ChatGPTViewController()
         let v3 = self .OpenARPintViewController()
-        let v4 = ExampleViewController()
+        let v4 = MapViewController()
         let v5 = ExampleViewController()
         v1.tabBarItem = ESTabBarItem.init(title: "Home", image: UIImage(named: "home"), selectedImage: UIImage(named: "home_1"))
         v2.tabBarItem = ESTabBarItem.init(title: "Find", image: UIImage(named: "find"), selectedImage: UIImage(named: "find_1"))

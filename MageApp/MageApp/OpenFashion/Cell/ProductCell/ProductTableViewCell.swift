@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AnimatedCollectionViewLayout
 
 class ProductTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
@@ -19,6 +20,10 @@ class ProductTableViewCell: UITableViewCell,UICollectionViewDelegate,UICollectio
     }
     func initUIproductCollectionView() {
         self.productCollectionView .registerCell(nibName: "CartItemCollectionViewCell")
+        let layout = AnimatedCollectionViewLayout()
+        layout.animator = ZoomInOutAttributesAnimator()
+        layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
+        self.productCollectionView.collectionViewLayout = layout
         self.productCollectionView.delegate = self
         self.productCollectionView.dataSource = self
         self.productCollectionView.bounces = false

@@ -19,6 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = CustomTabbarViewController()
         window?.makeKeyAndVisible()
         AppDelegate.shared.window = window // Connect it HERE!
+        
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

@@ -19,7 +19,7 @@ class VideoTableViewCell: UITableViewCell {
     }
 
     func initPlayVideo(link:String) {
-        if let url = URL(string: link) {
+        if let url = URL(string: "https://www.youtube.com/watch?v=dGobd_JmlTk") {
             //2. Create AVPlayer object
             let asset = AVAsset(url: url)
             let playerItem = AVPlayerItem(asset: asset)

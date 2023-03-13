@@ -121,7 +121,7 @@ class ARPintViewController: UIViewController,ARSCNViewDelegate,ARSessionDelegate
         // set up scene view
         sceneView.setup()
         sceneView.delegate = self
-        sceneView.session = session
+        sceneView.session = self.session
         sceneView.scene.enableEnvironmentMapWithIntensity(25, queue: serialQueue)
         // sceneView.showsStatistics = true
         setupFocusSquare()
