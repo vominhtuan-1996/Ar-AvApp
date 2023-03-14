@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     static var shared: AppDelegate { return UIApplication.shared.delegate as! AppDelegate }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        GMSServices.provideAPIKey("AIzaSyAZXckNX4q4JSz30_6b2BvdDMUT-JzrUNM")
+        GMSServices.provideAPIKey("")
         return true
     }
 
