@@ -82,11 +82,248 @@ extension String {
     }
 }
 
+protocol AttributedStringComponent {
+    var text: String { get }
+    func getAttributes() -> [NSAttributedString.Key: Any]?
+}
+
+// MARK: String extensions
+
+extension String: AttributedStringComponent {
+    var text: String { self }
+    func getAttributes() -> [NSAttributedString.Key: Any]? { return nil }
+}
+
+extension String {
+    func toAttributed(with attributes: [NSAttributedString.Key: Any]?) -> NSAttributedString {
+        .init(string: self, attributes: attributes)
+    }
+}
+
+// MARK: NSAttributedString extensions
+
+extension NSAttributedString: AttributedStringComponent {
+    var text: String { string }
+
+    func getAttributes() -> [Key: Any]? {
+        if string.isEmpty { return nil }
+        var range = NSRange(location: 0, length: string.count)
+        return attributes(at: 0, effectiveRange: &range)
+    }
+}
+
+extension NSAttributedString {
+
+    convenience init?(from attributedStringComponents: [AttributedStringComponent],
+                      defaultAttributes: [NSAttributedString.Key: Any],
+                      joinedSeparator: String = " ") {
+        switch attributedStringComponents.count {
+        case 0: return nil
+        default:
+            var joinedString = ""
+            typealias SttributedStringComponentDescriptor = ([NSAttributedString.Key: Any], NSRange)
+            let sttributedStringComponents = attributedStringComponents.enumerated().flatMap { (index, component) -> [SttributedStringComponentDescriptor] in
+                var components = [SttributedStringComponentDescriptor]()
+                if index != 0 {
+                    components.append((defaultAttributes,
+                                       NSRange(location: joinedString.count, length: joinedSeparator.count)))
+                    joinedString += joinedSeparator
+                }
+                components.append((component.getAttributes() ?? defaultAttributes,
+                                   NSRange(location: joinedString.count, length: component.text.count)))
+                joinedString += component.text
+                return components
+            }
+
+            let attributedString = NSMutableAttributedString(string: joinedString)
+            sttributedStringComponents.forEach { attributedString.addAttributes($0, range: $1) }
+            self.init(attributedString: attributedString)
+        }
+    }
+}
+
 extension UIView {
     func formatBorder(borderWidth : CGFloat, borderColor: UIColor ,cornerRadius: CGFloat)  {
         self.layer.cornerRadius = cornerRadius;
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor.cgColor
+    }
+    
+    func shadowView(shadowColor:UIColor , shadowOpacity:Float , shadowOffset:CGSize) {
+        // drop shadow
+        self.layer.shadowColor = shadowColor.cgColor
+        self.layer.shadowRadius = self.layer.cornerRadius;
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowOffset = shadowOffset
+    }
+    
+    func drawCustomShape(fillColor:UIColor) {
+        let cornerRadius: CGFloat = 0
+        let shapeOffset = self.frame.size.height * 0.2
+        
+        //create shape layer
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = self.bounds
+        shapeLayer.lineWidth = 0
+        shapeLayer.fillColor = fillColor.cgColor
+        
+        self.layer.addSublayer(shapeLayer)
+        
+        //create path
+        let path = UIBezierPath()
+        
+        //top left point
+        path.move(to: CGPoint(x: 0, y: self.frame.size.height - 20))
+        //top left corner
+//        path.addQuadCurve(to: CGPoint(x: cornerRadius, y: 0),
+//                          controlPoint: CGPoint(x: 0, y: 0))
+        
+        //top right point
+        path.addLine(to: CGPoint(x: self.frame.size.width - cornerRadius, y: 10))
+        //top right corner
+//        path.addQuadCurve(to: CGPoint(x: self.frame.size.width, y: cornerRadius),
+//                          controlPoint: CGPoint(x: self.frame.size.width, y: 0))
+        
+        //bottom right point
+        path.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height / 4))
+        //bottom right corner
+//        path.addQuadCurve(to: CGPoint(x: self.frame.size.width - cornerRadius, y: self.frame.size.height - shapeOffset),
+//                          controlPoint: CGPoint(x: self.frame.size.width, y: self.frame.size.height - shapeOffset))
+        
+        //bottom left
+        path.addLine(to: CGPoint(x: cornerRadius, y: self.frame.size.height))
+        //bottom left corner
+//        path.addQuadCurve(to: CGPoint(x: 0, y: self.frame.size.height - cornerRadius),
+//                          controlPoint: CGPoint(x: 0, y: self.frame.size.height))
+        
+        path.close()
+        
+        shapeLayer.path = path.cgPath
+    }
+    
+    func addTopDrawing() {
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = self.bounds
+        shapeLayer.lineWidth = 0
+        shapeLayer.fillColor = UIColor.red.cgColor
+        self.layer.addSublayer(shapeLayer)
+        // ...  let bezierPath = UIBezierPath ()
+        let path = UIBezierPath ()
+        path.move(to:.zero)
+        path.addLine(to: CGPoint(x: 0, y: self.frame.size.height -  (self.frame.size.height / 3)))
+        path.addLine(to: CGPoint(x: 0, y: self.frame.size.height -  (self.frame.size.height / 3)) )
+        path.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height / 2) )
+        path.addLine(to: CGPoint(x: self.frame.size.width, y: 0) )
+//        path.addCurve(to: CGPoint(x: 40, y: 75),
+//                      controlPoint1: CGPoint(
+//                        x: self.frame.size.width-40,
+//                        y: self.frame.size.height*0.15625),
+//                      controlPoint2: CGPoint(
+//                        x: self.frame.size.width * 3 / 5,
+//                        y: self.frame.size.height * 0.09375))
+//        path.addCurve(to: CGPoint(x: 0, y: 50),
+//                      controlPoint1: CGPoint(x: 10, y: 75),
+//                      controlPoint2: CGPoint(x: 0, y: 65))
+        path.addLine(to: .zero)
+        
+        path.close()
+        shapeLayer.path = path.cgPath
+        // ...
+    }
+    
+    func addBotDrawing () {
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.frame = self.bounds
+        shapeLayer.lineWidth = 0
+        shapeLayer.fillColor = UIColor.red.cgColor
+        self.layer.addSublayer(shapeLayer)
+        let path = UIBezierPath ()
+        path.move(to: CGPoint(x: 0, y: self.frame.size.height*0.6875))
+        path.addCurve(to: CGPoint(x: self.frame.size.width-40, y: self.frame.size.height-75),
+                      controlPoint1: CGPoint(
+                        x: 40,
+                        y: self.frame.size.height * 0.84375),
+                      controlPoint2: CGPoint(
+                        x: self.frame.size.width * 2 / 5,
+                        y: self.frame.size.height * 0.90625))
+        
+        path.addCurve(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height - 50),
+                      controlPoint1: CGPoint(
+                        x: self.frame.size.width - 10,
+                        y: self.frame.size.height - 75),
+                      controlPoint2: CGPoint(
+                        x: self.frame.size.width,
+                        y : self.frame.size.height - 65))
+        path.addLine(to: CGPoint(x: self.frame.size.width, y: self.frame.size.height))
+        path.addLine(to: CGPoint(x: 0, y: self.frame.size.height))
+        path.addLine(to: CGPoint(x: 0, y: self.frame.size.height * 0.6875))
+        path.close()
+        shapeLayer.path = path.cgPath
+        // ...
+    }
+    
+    fileprivate struct AssociatedObjectKeys {
+        static var tapGestureRecognizer = "MediaViewerAssociatedObjectKey_mediaViewer"
+    }
+    
+    fileprivate typealias Action = (() -> Void)?
+    
+    
+    fileprivate var tapGestureRecognizerAction: Action? {
+        set {
+            if let newValue = newValue {
+                // Computed properties get stored as associated objects
+                objc_setAssociatedObject(self, &AssociatedObjectKeys.tapGestureRecognizer, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+            }
+        }
+        get {
+            let tapGestureRecognizerActionInstance = objc_getAssociatedObject(self, &AssociatedObjectKeys.tapGestureRecognizer) as? Action
+            return tapGestureRecognizerActionInstance
+        }
+    }
+    
+    public func addTapGestureRecognizer(action: (() -> Void)?) {
+        self.isUserInteractionEnabled = true
+        self.tapGestureRecognizerAction = action
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture))
+        self.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc fileprivate func handleTapGesture(sender: UITapGestureRecognizer) {
+        if let action = self.tapGestureRecognizerAction {
+            action?()
+        } else {
+            print("no action")
+        }
+    }
+}
+
+extension UITextField {
+    
+    //MARK:- Set Image on the right of text fields
+    
+    func setupRightImage(imageName:String,tintColors:UIColor){
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
+        imageView.image = UIImage(named: imageName)
+        let imageContainerView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.size.height, height: self.frame.size.height))
+        imageView.center = imageContainerView.center;
+        imageContainerView.addSubview(imageView)
+        rightView = imageContainerView
+        rightViewMode = .always
+        self.tintColor = tintColors
+    }
+    
+    //MARK:- Set Image on left of text fields
+    
+    func setupLeftImage(imageName:String,tintColors:UIColor){
+        let imageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
+        imageView.image = UIImage(named: imageName)
+        let imageContainerView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: self.frame.size.height, height: self.frame.size.height))
+        imageView.center = imageContainerView.center;
+        imageContainerView.addSubview(imageView)
+        leftView = imageContainerView
+        leftViewMode = .always
+        self.tintColor = tintColors
     }
 }
 
@@ -384,6 +621,18 @@ extension SCNVector3 {
         return SCNVector3Make(left.x - right.x, left.y - right.y, left.z - right.z)
     }
 
+}
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
 

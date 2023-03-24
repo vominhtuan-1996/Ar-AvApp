@@ -45,6 +45,7 @@
 		055D9C28293DDBC800BE6D8F /* Catier.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C27293DDBC800BE6D8F /* Catier.png */; };
 		055D9C2A293DDBE200BE6D8F /* Gucci.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C29293DDBE200BE6D8F /* Gucci.png */; };
 		055D9C2C293DDBFA00BE6D8F /* Tiffany&Co.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C2B293DDBFA00BE6D8F /* Tiffany&Co.png */; };
+		0560C2F629CBFDCA008C732E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0560C2F529CBFDCA008C732E /* LoginViewController.swift */; };
 		0561EF7E29529F64006E0BD6 /* ChatGPTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561EF7C29529F64006E0BD6 /* ChatGPTViewController.swift */; };
 		0561EF7F29529F64006E0BD6 /* ChatGPTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561EF7D29529F64006E0BD6 /* ChatGPTViewController.xib */; };
 		0563374A29516D58006E7B36 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0563374929516D58006E7B36 /* OpenAISwift */; };
@@ -151,6 +152,7 @@
 		055D9C27293DDBC800BE6D8F /* Catier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Catier.png; sourceTree = "<group>"; };
 		055D9C29293DDBE200BE6D8F /* Gucci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gucci.png; sourceTree = "<group>"; };
 		055D9C2B293DDBFA00BE6D8F /* Tiffany&Co.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tiffany&Co.png"; sourceTree = "<group>"; };
+		0560C2F529CBFDCA008C732E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0561EF7C29529F64006E0BD6 /* ChatGPTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewController.swift; sourceTree = "<group>"; };
 		0561EF7D29529F64006E0BD6 /* ChatGPTViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatGPTViewController.xib; sourceTree = "<group>"; };
 		0572087429AF318F002FCC48 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
@@ -457,6 +459,14 @@
 			path = ImageBrand;
 			sourceTree = "<group>";
 		};
+		0560C2F429CBFDB2008C732E /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0560C2F529CBFDCA008C732E /* LoginViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
 		0561EF7A29529F33006E0BD6 /* CHATGPT */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +560,7 @@
 		059DC8862938617700D337DC /* MageApp */ = {
 			isa = PBXGroup;
 			children = (
+				0560C2F429CBFDB2008C732E /* LoginViewController */,
 				05751C0A29BF031C00BF9D15 /* MapViewController */,
 				05B8CCBD29ADAE38007C3816 /* ARPaint */,
 				0561EF7A29529F33006E0BD6 /* CHATGPT */,
@@ -968,6 +979,7 @@
 				05A03E6A293893F900F19C0B /* ExampleBasicContentView.swift in Sources */,
 				05A03E6C293893F900F19C0B /* ExampleAnimateTipsContentView.swift in Sources */,
 				055D9C14293DCA0C00BE6D8F /* CartItemCollectionViewCell.swift in Sources */,
+				0560C2F629CBFDCA008C732E /* LoginViewController.swift in Sources */,
 				05A03E512938931400F19C0B /* ExampleViewController.swift in Sources */,
 				0561EF7E29529F64006E0BD6 /* ChatGPTViewController.swift in Sources */,
 				05B4C7C0299F30DB00D1DF4D /* HeaderView.swift in Sources */,
@@ -1144,6 +1156,13 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MageApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera is used for augmenting reality";
+				INFOPLIST_KEY_NSContactsUsageDescription = "$(PRODUCT_NAME) will try to match your friends with the contacts on your device.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The location is used for augmenting reality";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save photos of your ARExperience";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Save photos of your AR experience";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1184,6 +1203,13 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MageApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The camera is used for augmenting reality";
+				INFOPLIST_KEY_NSContactsUsageDescription = "$(PRODUCT_NAME) will try to match your friends with the contacts on your device.";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The location is used for augmenting reality";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Save photos of your ARExperience";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Save photos of your AR experience";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

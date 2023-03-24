@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import IQKeyboardManagerSwift
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
@@ -16,10 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen().coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = CustomTabbarViewController()
+        window?.rootViewController = self.openLoginViewController()
+//        CustomTabbarViewController()
         window?.makeKeyAndVisible()
         AppDelegate.shared.window = window // Connect it HERE!
-        
+        IQKeyboardManager.shared.enable = true
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 
@@ -52,6 +53,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
+    }
+    
+    func openLoginViewController() -> UIViewController  {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "LoginViewController")
     }
 
 
