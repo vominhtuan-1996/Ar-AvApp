@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SVProgressHUD
 import UIView_Shimmer
 import Alamofire
 
@@ -26,13 +25,15 @@ class FashionHomeViewController: UIViewController,UITableViewDelegate,UITableVie
         isLoading = true
         self .initUITableView()
         self .fecthData()
+        let name = Defaults.getNameAndPassWord().name
+        
     }
     
     // MARK: fecthData
     
     func fecthData() {
         let body: [String : Any] = [:]
-        MegaHttps(data: body, url: nil,service: .getDataHomePage,method: .get).executeQuery { errorCode, message, result in
+        MegaHttps(data: body, url: .MobiMap,service: .getDataHomePage,method: .get,isJSONRequest: false).executeQuery { errorCode, message, result in
             if (errorCode == 0) {
                 self.homePageModel = HomeModel() .parseDataForHomeModelWithDictionary(dict: result as! [NSDictionary])
                 self.isLoading = false

@@ -97,6 +97,8 @@
 		05B8CCBF29ADAE4F007C3816 /* ARPintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8CCBE29ADAE4F007C3816 /* ARPintViewController.swift */; };
 		05B8CCC229ADB3B4007C3816 /* VirtualObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8CCC129ADB3B4007C3816 /* VirtualObjectManager.swift */; };
 		05B8CCC429ADB470007C3816 /* PointNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B8CCC329ADB470007C3816 /* PointNode.swift */; };
+		05C04C4929D3E66300FB4807 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C04C4829D3E66300FB4807 /* Define.swift */; };
+		05C04C4C29D4178300FB4807 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C04C4B29D4178300FB4807 /* Helper.swift */; };
 		63CF8DAC70D81D371E21D39B /* Pods_MageApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9225823DA8FF1E39E15F2DA /* Pods_MageApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -205,6 +207,8 @@
 		05B8CCBE29ADAE4F007C3816 /* ARPintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPintViewController.swift; sourceTree = "<group>"; };
 		05B8CCC129ADB3B4007C3816 /* VirtualObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualObjectManager.swift; sourceTree = "<group>"; };
 		05B8CCC329ADB470007C3816 /* PointNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointNode.swift; sourceTree = "<group>"; };
+		05C04C4829D3E66300FB4807 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		05C04C4B29D4178300FB4807 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		05C577E429BB3CCE001C54DE /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		05C577E629BB3CCE001C54DE /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 		05C577E929BB3CCE001C54DE /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -304,11 +308,13 @@
 		055D165C29399F2100824475 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				05C04C4A29D4174400FB4807 /* Helper */,
 				054851F529ADDD1000E1383F /* TextManager */,
 				05B4C7BE299F30C100D1DF4D /* HeaderView */,
 				055D9C16293DCB4100BE6D8F /* Tenor_Sans */,
 				055D9C10293DC71800BE6D8F /* MGHttp */,
 				055D165D29399FA100824475 /* Extention.swift */,
+				05C04C4829D3E66300FB4807 /* Define.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -737,6 +743,14 @@
 			path = VirtualObjects;
 			sourceTree = "<group>";
 		};
+		05C04C4A29D4174400FB4807 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				05C04C4B29D4178300FB4807 /* Helper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		05C577E829BB3CCE001C54DE /* MegaApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -964,6 +978,7 @@
 				055D166E2939F04700824475 /* CollectionViewCell.swift in Sources */,
 				05A03E70293893F900F19C0B /* ExampleLottieAnimateContentView.swift in Sources */,
 				054851FF29ADEDD700E1383F /* Plane.swift in Sources */,
+				05C04C4C29D4178300FB4807 /* Helper.swift in Sources */,
 				05A03E53293893B800F19C0B /* ExampleNavigationController.swift in Sources */,
 				05A03E6B293893F900F19C0B /* ExampleBouncesContentView.swift in Sources */,
 				055D165E29399FA100824475 /* Extention.swift in Sources */,
@@ -972,6 +987,7 @@
 				05A03E4F293892A700F19C0B /* ExampleProvider.swift in Sources */,
 				05B8CCC229ADB3B4007C3816 /* VirtualObjectManager.swift in Sources */,
 				0543ED36293EDA4B006A3B97 /* CollectionsCell.swift in Sources */,
+				05C04C4929D3E66300FB4807 /* Define.swift in Sources */,
 				059DC8922938617700D337DC /* MageApp.xcdatamodeld in Sources */,
 				0583210D2940961D00235023 /* MegaHttps.swift in Sources */,
 				054851FA29ADDEB700E1383F /* FocusSquare.swift in Sources */,

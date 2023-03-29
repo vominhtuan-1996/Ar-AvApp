@@ -18,9 +18,11 @@ import ObjectMapper
     enum services :String{
         case posts = "posts"
         case getDataHomePage = "home.json"
+        case Login = "stag/FMapService.svc/Login"
     }
     enum BaseUrl:String {
         case MobiMap = "https://raw.githubusercontent.com/vominhtuan-1996/APITest/main/Open_Fashion/"
+        case MobiMapHost = "https://mobimapstag.fpt.vn/"
     }
     let connectivityManager = NetworkReachabilityManager()
     var parameters = Parameters()
@@ -28,20 +30,17 @@ import ObjectMapper
     var method: HTTPMethod!
     var url :String! = BaseUrl.MobiMap.rawValue
     var encoding: ParameterEncoding! = URLEncoding.default
-    init(data: [String:Any],headers: [String:String] = [:],url :String?,service :services? = nil, method: HTTPMethod = .post, isJSONRequest: Bool = true){
+    init(data: [String:Any],headers: [String:String] = [:],url :BaseUrl,service :services? = nil, method: HTTPMethod = .post, isJSONRequest: Bool = true){
         self.errorCode = 1000
         self.message = ""
         self.result = []
         super.init()
         data.forEach{parameters.updateValue($0.value, forKey: $0.key)}
         headers.forEach({self.headers.add(name: $0.key, value: $0.value)})
-        if url == nil, service != nil{
-            self.url += service!.rawValue
-        }else{
-            self.url = url
-        }
-        if !isJSONRequest{
-            encoding = URLEncoding.default
+        self.url = url.rawValue
+        self.url += service!.rawValue
+        if isJSONRequest{
+            encoding = JSONEncoding.default
         }
         self.method = method
         print("Service: \(service?.rawValue ?? self.url + service!.rawValue ) \n data: \(parameters)")
@@ -57,10 +56,20 @@ import ObjectMapper
                         do {
                             if let json = try JSONSerialization.jsonObject(with: res, options: []) as? [String: Any] {
                                 // try to read out a string array
-                                if (self .handerAPI(dict: json["responseResult"] as! NSDictionary)) {
-                                    completionHandlers(self.errorCode, self.message,self.result)
-                                } else {
-                                    completionHandlers(self.errorCode, self.message,self.result)
+                                json.keys.forEach { Response in
+                                    if (Response == "ResponseResult") {
+                                        if (self .handerAPIV1(dict: json["ResponseResult"] as! NSDictionary)) {
+                                            completionHandlers(self.errorCode, self.message,self.result)
+                                        } else {
+                                            completionHandlers(self.errorCode, self.message,self.result)
+                                        }
+                                    } else {
+                                        if (self .handerAPIV2(dict: json["responseResult"] as! NSDictionary)) {
+                                            completionHandlers(self.errorCode, self.message,self.result)
+                                        } else {
+                                            completionHandlers(self.errorCode, self.message,self.result)
+                                        }
+                                    }
                                 }
                             }
                         } catch let error {
@@ -77,10 +86,20 @@ import ObjectMapper
             }
         })
     }
-    func handerAPI(dict:NSDictionary)-> Bool  {
+    
+    func handerAPIV2(dict:NSDictionary)-> Bool  {
         self.errorCode = dict["errorCode"] as? Int ?? 1000
         self.message = dict["message"] as? String ?? ""
         self.result = dict["result"] as Any
+        if (self.errorCode == 0) {
+            return true
+        }
+        return false
+    }
+    func handerAPIV1(dict:NSDictionary)-> Bool  {
+        self.errorCode = dict["ErrorCode"] as? Int ?? 1000
+        self.message = dict["Message"] as? String ?? ""
+        self.result = dict["Result"] as Any
         if (self.errorCode == 0) {
             return true
         }
