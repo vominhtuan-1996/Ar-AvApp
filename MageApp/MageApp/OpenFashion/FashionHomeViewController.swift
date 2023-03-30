@@ -25,8 +25,6 @@ class FashionHomeViewController: UIViewController,UITableViewDelegate,UITableVie
         isLoading = true
         self .initUITableView()
         self .fecthData()
-        let name = Defaults.getNameAndPassWord().name
-        
     }
     
     // MARK: fecthData

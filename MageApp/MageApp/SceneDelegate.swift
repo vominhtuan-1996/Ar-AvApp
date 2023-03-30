@@ -16,7 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen().coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = self.openLoginViewController()
+        window?.rootViewController = CustomTabbarViewController()
+//        self.openLoginViewController()
 //        CustomTabbarViewController()
         window?.makeKeyAndVisible()
         AppDelegate.shared.window = window // Connect it HERE!

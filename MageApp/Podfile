@@ -13,7 +13,7 @@ target 'MageApp' do
   pod 'pop', '~> 1.0'
   pod 'lottie-ios'
   pod 'SDWebImage'
-  pod 'SVProgressHUD'
+  pod 'ARSLineProgress'
   pod 'UIView-Shimmer', '~> 1.0'
   pod 'AnimatedCollectionViewLayout'
   pod 'TensorFlowLiteSwift'

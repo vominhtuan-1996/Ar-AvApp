@@ -5,6 +5,7 @@
         <deployment version="4368" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -54,6 +55,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u55-Tg-Zoe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-332" y="-264"/>
+        </scene>
+        <!--Tic Toe View Controller-->
+        <scene sceneID="iS2-rW-t5C">
+            <objects>
+                <viewController restorationIdentifier="TicToeViewController" storyboardIdentifier="TicToeViewController" id="iJO-SV-ayl" customClass="TicToeViewController" customModule="MageApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aUI-lq-AZH"/>
+                        <viewControllerLayoutGuide type="bottom" id="MH4-V3-a8L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Ex-A8-wJe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LH9-Rq-rst">
+                                <rect key="frame" x="46.666666666666657" y="276" width="300" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="SOw-G8-w1M"/>
+                                    <constraint firstAttribute="width" constant="300" id="x7i-eI-dSM"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3UA-ex-ydG">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1f5-dI-H0e">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9x5-5i-1jk">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fA-IE-TbG">
+                                <rect key="frame" x="98.333333333333329" y="728" width="196.33333333333337" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zyc-IY-kbn"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButton_TouchupInside:" destination="iJO-SV-ayl" eventType="touchUpInside" id="ViN-Nz-IBM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LH9-Rq-rst" firstAttribute="centerY" secondItem="9Ex-A8-wJe" secondAttribute="centerY" id="3SY-UX-LFo"/>
+                            <constraint firstItem="MH4-V3-a8L" firstAttribute="top" secondItem="5fA-IE-TbG" secondAttribute="bottom" constant="40" id="YKt-Wi-O5u"/>
+                            <constraint firstItem="LH9-Rq-rst" firstAttribute="centerX" secondItem="9Ex-A8-wJe" secondAttribute="centerX" id="pcU-Yn-AgC"/>
+                            <constraint firstItem="5fA-IE-TbG" firstAttribute="width" secondItem="9Ex-A8-wJe" secondAttribute="width" multiplier="0.5" id="wyA-U4-gho"/>
+                            <constraint firstItem="5fA-IE-TbG" firstAttribute="centerX" secondItem="9Ex-A8-wJe" secondAttribute="centerX" id="yhp-C0-jDJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playButton" destination="5fA-IE-TbG" id="kdM-S6-QWq"/>
+                        <outlet property="tictoeCollectionView" destination="LH9-Rq-rst" id="N3H-7j-CDH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DnO-Sm-U2E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184" y="411"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="AlL-ae-aJv">
@@ -248,6 +318,9 @@
         <image name="mail" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

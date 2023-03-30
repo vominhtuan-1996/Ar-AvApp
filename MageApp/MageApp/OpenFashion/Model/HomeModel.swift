@@ -150,8 +150,21 @@ struct ListTrending:Decodable {
     
 }
 
-struct FollowUsModel:Decodable {
-    let userId:String
-    let userName:String
-    let avartar:String
+struct UserPlayer {
+    var player1:Bool
+    var player2:Bool
+    var listIndexPlayer1:NSMutableArray = []
+    var listIndexPlayer2:NSMutableArray = []
+    
+    mutating func ClearData() {
+        self.player1 = true
+        self.player2 = false
+        self.listIndexPlayer1 .removeAllObjects()
+        self.listIndexPlayer2 .removeAllObjects()
+    }
+}
+
+struct UserSelectedModel {
+    var index:Int
+    var imageName:String
 }

@@ -13,12 +13,13 @@ class CustomTabbarViewController: ESTabBarController, UITabBarControllerDelegate
         self.title = "Example"
         self .setupUITabbar()
         self .setUpNavigationBar()
+        self.tabBar.backgroundColor = UIColor.white
     }
     // MARK:  Function
     
     func setupUITabbar() {
         let v1 = self .OpenFashionHomeViewControler()
-        let v2 = ChatGPTViewController()
+        let v2 = self .openTicToeViewControler()
         let v3 = self .OpenARPintViewController()
         let v4 = MapViewController()
         let v5 = ExampleViewController()
@@ -42,5 +43,10 @@ class CustomTabbarViewController: ESTabBarController, UITabBarControllerDelegate
     func OpenARPintViewController() -> UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: "ARPintViewController")
+    }
+    
+    func openTicToeViewControler() -> UIViewController {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: "TicToeViewController")
     }
 }

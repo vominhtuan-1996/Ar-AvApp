@@ -46,13 +46,14 @@
 		055D9C2A293DDBE200BE6D8F /* Gucci.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C29293DDBE200BE6D8F /* Gucci.png */; };
 		055D9C2C293DDBFA00BE6D8F /* Tiffany&Co.png in Resources */ = {isa = PBXBuildFile; fileRef = 055D9C2B293DDBFA00BE6D8F /* Tiffany&Co.png */; };
 		0560C2F629CBFDCA008C732E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0560C2F529CBFDCA008C732E /* LoginViewController.swift */; };
-		0561EF7E29529F64006E0BD6 /* ChatGPTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0561EF7C29529F64006E0BD6 /* ChatGPTViewController.swift */; };
-		0561EF7F29529F64006E0BD6 /* ChatGPTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0561EF7D29529F64006E0BD6 /* ChatGPTViewController.xib */; };
 		0563374A29516D58006E7B36 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0563374929516D58006E7B36 /* OpenAISwift */; };
 		0572087529AF3190002FCC48 /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0572087429AF318F002FCC48 /* ContactsUI.framework */; };
 		05751C0D29BF033600BF9D15 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05751C0B29BF033600BF9D15 /* MapViewController.swift */; };
 		05751C0E29BF033600BF9D15 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05751C0C29BF033600BF9D15 /* MapViewController.xib */; };
 		05751C1029BF042400BF9D15 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05751C0F29BF042300BF9D15 /* CoreLocation.framework */; };
+		0581BDB529D526F0009630BA /* TicToeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0581BDB429D526F0009630BA /* TicToeViewController.swift */; };
+		0581BDB929D5281E009630BA /* TicToeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0581BDB729D5281E009630BA /* TicToeCollectionViewCell.swift */; };
+		0581BDBA29D5281E009630BA /* TicToeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0581BDB829D5281E009630BA /* TicToeCollectionViewCell.xib */; };
 		058320FB2940298600235023 /* OpenFashionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058320F92940298600235023 /* OpenFashionTableViewCell.swift */; };
 		058320FC2940298600235023 /* OpenFashionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 058320FA2940298600235023 /* OpenFashionTableViewCell.xib */; };
 		0583210029406D9D00235023 /* FollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058320FE29406D9D00235023 /* FollowTableViewCell.swift */; };
@@ -155,12 +156,13 @@
 		055D9C29293DDBE200BE6D8F /* Gucci.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gucci.png; sourceTree = "<group>"; };
 		055D9C2B293DDBFA00BE6D8F /* Tiffany&Co.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tiffany&Co.png"; sourceTree = "<group>"; };
 		0560C2F529CBFDCA008C732E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		0561EF7C29529F64006E0BD6 /* ChatGPTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGPTViewController.swift; sourceTree = "<group>"; };
-		0561EF7D29529F64006E0BD6 /* ChatGPTViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatGPTViewController.xib; sourceTree = "<group>"; };
 		0572087429AF318F002FCC48 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		05751C0B29BF033600BF9D15 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		05751C0C29BF033600BF9D15 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		05751C0F29BF042300BF9D15 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0581BDB429D526F0009630BA /* TicToeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicToeViewController.swift; sourceTree = "<group>"; };
+		0581BDB729D5281E009630BA /* TicToeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicToeCollectionViewCell.swift; sourceTree = "<group>"; };
+		0581BDB829D5281E009630BA /* TicToeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TicToeCollectionViewCell.xib; sourceTree = "<group>"; };
 		058320F92940298600235023 /* OpenFashionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFashionTableViewCell.swift; sourceTree = "<group>"; };
 		058320FA2940298600235023 /* OpenFashionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenFashionTableViewCell.xib; sourceTree = "<group>"; };
 		058320FE29406D9D00235023 /* FollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowTableViewCell.swift; sourceTree = "<group>"; };
@@ -473,23 +475,6 @@
 			path = LoginViewController;
 			sourceTree = "<group>";
 		};
-		0561EF7A29529F33006E0BD6 /* CHATGPT */ = {
-			isa = PBXGroup;
-			children = (
-				0561EF7B29529F4C006E0BD6 /* ViewController */,
-			);
-			path = CHATGPT;
-			sourceTree = "<group>";
-		};
-		0561EF7B29529F4C006E0BD6 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				0561EF7C29529F64006E0BD6 /* ChatGPTViewController.swift */,
-				0561EF7D29529F64006E0BD6 /* ChatGPTViewController.xib */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		05751C0A29BF031C00BF9D15 /* MapViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -497,6 +482,32 @@
 				05751C0C29BF033600BF9D15 /* MapViewController.xib */,
 			);
 			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		0581BDB329D526D8009630BA /* TicToeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0581BDBB29D52883009630BA /* Controller */,
+				0581BDB629D52807009630BA /* Cell */,
+			);
+			path = TicToeViewController;
+			sourceTree = "<group>";
+		};
+		0581BDB629D52807009630BA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0581BDB729D5281E009630BA /* TicToeCollectionViewCell.swift */,
+				0581BDB829D5281E009630BA /* TicToeCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		0581BDBB29D52883009630BA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0581BDB429D526F0009630BA /* TicToeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		058320F82940295F00235023 /* OpenFashionCell */ = {
@@ -566,10 +577,10 @@
 		059DC8862938617700D337DC /* MageApp */ = {
 			isa = PBXGroup;
 			children = (
+				0581BDB329D526D8009630BA /* TicToeViewController */,
 				0560C2F429CBFDB2008C732E /* LoginViewController */,
 				05751C0A29BF031C00BF9D15 /* MapViewController */,
 				05B8CCBD29ADAE38007C3816 /* ARPaint */,
-				0561EF7A29529F33006E0BD6 /* CHATGPT */,
 				055D165F2939B5B800824475 /* OpenFashion */,
 				055D165C29399F2100824475 /* Utilities */,
 				05A03E4D2938926E00F19C0B /* Tabbar */,
@@ -853,12 +864,12 @@
 				055D9C1A293DCB4100BE6D8F /* OFL.txt in Resources */,
 				055D9C06293D86DC00BE6D8F /* MenuProductCell.xib in Resources */,
 				055D9C21293DDB6E00BE6D8F /* Boss.png in Resources */,
-				0561EF7F29529F64006E0BD6 /* ChatGPTViewController.xib in Resources */,
 				055D9C2C293DDBFA00BE6D8F /* Tiffany&Co.png in Resources */,
 				055D9C0B293D931A00BE6D8F /* MenuArrivalItemCell.xib in Resources */,
 				055D16642939D5B300824475 /* Logo.png in Resources */,
 				0583210B294072E700235023 /* FooterTableViewCell.xib in Resources */,
 				059DC8972938617800D337DC /* LaunchScreen.storyboard in Resources */,
+				0581BDBA29D5281E009630BA /* TicToeCollectionViewCell.xib in Resources */,
 				05A26BFB293F3BA6008C8FD2 /* TitleCollectionViewCell.xib in Resources */,
 				053F243C293EEEE700B90350 /* VideoTableViewCell.xib in Resources */,
 				0548520529ADEFC000E1383F /* wood-diffuse.jpg in Resources */,
@@ -961,8 +972,10 @@
 				05A26BF5293F2A29008C8FD2 /* TrendingTableViewCell.swift in Sources */,
 				055D9C0A293D931A00BE6D8F /* MenuArrivalItemCell.swift in Sources */,
 				059DC8882938617700D337DC /* AppDelegate.swift in Sources */,
+				0581BDB929D5281E009630BA /* TicToeCollectionViewCell.swift in Sources */,
 				05B8CCC429ADB470007C3816 /* PointNode.swift in Sources */,
 				055D9C05293D86DC00BE6D8F /* MenuProductCell.swift in Sources */,
+				0581BDB529D526F0009630BA /* TicToeViewController.swift in Sources */,
 				058321132940986400235023 /* BaseResponse.swift in Sources */,
 				055D16692939F01200824475 /* TableViewCell.swift in Sources */,
 				058320FB2940298600235023 /* OpenFashionTableViewCell.swift in Sources */,
@@ -997,7 +1010,6 @@
 				055D9C14293DCA0C00BE6D8F /* CartItemCollectionViewCell.swift in Sources */,
 				0560C2F629CBFDCA008C732E /* LoginViewController.swift in Sources */,
 				05A03E512938931400F19C0B /* ExampleViewController.swift in Sources */,
-				0561EF7E29529F64006E0BD6 /* ChatGPTViewController.swift in Sources */,
 				05B4C7C0299F30DB00D1DF4D /* HeaderView.swift in Sources */,
 				0583210A294072E700235023 /* FooterTableViewCell.swift in Sources */,
 				058321172940995100235023 /* APIRouter.swift in Sources */,

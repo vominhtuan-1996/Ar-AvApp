@@ -84,9 +84,40 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: TextFieldDelegate
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-            print("While entering the characters this method gets called")
-            return true;
+    private func textFieldDidBeginEditing(textField: UITextField) {
+        print("TextField did begin editing method called")
+    }
+
+    private func textFieldDidEndEditing(textField: UITextField) {
+        print("TextField did end editing method called\(textField.text!)")
+    }
+
+    private func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
+        print("TextField should begin editing method called")
+        return true;
+    }
+
+    private func textFieldShouldClear(textField: UITextField) -> Bool {
+        print("TextField should clear method called")
+        return true;
+    }
+
+    private func textFieldShouldEndEditing(textField: UITextField) -> Bool {
+        print("TextField should end editing method called")
+        return true;
+    }
+
+
+    private func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        print("While entering the characters this method gets called")
+        return true;
+    }
+
+
+    private func textFieldShouldReturn(textField: UITextField) -> Bool {
+        print("TextField should return method called")
+        textField.resignFirstResponder();
+        return true;
     }
     // MARK: Action
     @IBAction func rememberPasswordButton_TouchupInSide(_ sender: Any) {
@@ -104,7 +135,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         body["Password"] = self.password
         body["Username"] = self.username
         body["DeviceIMEI"] = "3bcbec445806182260bb46067da1e566a1289943"
-        MegaHttps(data: body,headers: headers, url: .MobiMapHost,service: .Login ,method: .post).executeQuery { errCode, mess, res in
+        self .loginWithDataBody(dataBody: body, headers: headers)
+    }
+    
+    // MARK: API
+    
+    func loginWithDataBody(dataBody:[String : Any],headers:[String : String]) {
+        MegaHttps(data: dataBody,headers: headers, url: .MobiMapHost,service: .Login ,method: .post).executeQuery { errCode, mess, res in
             ARSLineProgress .hide()
             if (errCode == 0) {
                 Defaults.save(self.username, passWord: self.password)
@@ -133,7 +170,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                                               NoTitle: nil,
                                                               styleNoAction:nil) {_ in }
         }
-
     }
     
     

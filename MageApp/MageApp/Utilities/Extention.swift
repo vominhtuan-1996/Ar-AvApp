@@ -151,15 +151,150 @@ extension UIView {
     
     func shadowView(shadowColor:UIColor , shadowOpacity:Float , shadowOffset:CGSize) {
         // drop shadow
+        self.layer.masksToBounds = false
         self.layer.shadowColor = shadowColor.cgColor
         self.layer.shadowRadius = self.layer.cornerRadius;
         self.layer.shadowOpacity = shadowOpacity
         self.layer.shadowOffset = shadowOffset
+        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+    }
+    
+    func DropShadowsView(shadowOffset:CGSize , shadowOpacity:Float , shadowColor:UIColor) {
+        self.clipsToBounds = false
+        self.layer.masksToBounds = false
+        self.layer.shadowRadius = 10
+        self.layer.shadowOffset = shadowOffset
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowColor = shadowColor.cgColor
+        self.layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+    }
+    
+    func Contactshadows(size:CGFloat, shadowOpacity:Float , shadowColor:UIColor){
+        //size âm sẽ làm cho shadow nhỏ hơn so với hình ảnh, và khoảng cách lớn hơn 0 sẽ khiến cho view nhìn xa hơn so với các view khác
+        let distance: CGFloat = 0
+        let rect = CGRect(
+            x: -size,
+            y: self.frame.height - (size * 0.4) + distance,
+            width: self.frame.width + size * 2,
+            height: size
+        )
+        self.clipsToBounds = false
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = shadowColor.cgColor
+        self.layer.shadowRadius = 7
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowPath = UIBezierPath(ovalIn: rect).cgPath
+    }
+    
+    func ContactShadowswithDepth(scale:CGSize,offsetX:CGFloat , shadowOpacity:Float , shadowColor:UIColor)  {
+        let shadowPath = UIBezierPath()
+        shadowPath.move(to:
+            CGPoint(
+                x: 0,
+                y: self.frame.height
+            )
+        )
+        shadowPath.addLine(to:
+            CGPoint(
+                x: self.frame.width,
+                y: self.frame.height
+            )
+        )
+        shadowPath.addLine(to:
+            CGPoint(
+                x: self.frame.width * scale.width + offsetX,
+                y: self.frame.height * (1 + scale.height)
+            )
+        )
+        shadowPath.addLine(to:
+            CGPoint(
+                x: self.frame.width * (1 - scale.width) + offsetX,
+                y: self.frame.height * (1 + scale.height)
+            )
+        )
+        self.clipsToBounds = false
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = shadowColor.cgColor
+        self.layer.shadowRadius = 7
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowPath = shadowPath.cgPath
+
+    }
+    
+    func FlatContactShadows(scale:CGSize, shadowOpacity:Float , shadowColor:UIColor) {
+        let offset = CGPoint(x: self.frame.width, y: -self.frame.height)
+        let shadowPath = UIBezierPath()
+        shadowPath.move(to:
+            CGPoint(
+                x: 0,
+                y: self.frame.height + (copysign(1, scale.height) * copysign(1, offset.x) == 1 ? 0 : offset.y)
+            )
+        )
+        shadowPath.addLine(to:
+            CGPoint(
+                x: self.frame.width,
+                y: self.frame.height + (copysign(1, scale.height) * copysign(1, offset.x) == -1 ? 0 : offset.y)
+            )
+        )
+        shadowPath.addLine(to:
+            CGPoint(
+                x: self.frame.width * scale.width + offset.x,
+                y: self.frame.height * (1 + scale.height) + offset.y
+            )
+        )
+        shadowPath.addLine(to:
+            CGPoint(
+                x: self.frame.width * (1 - scale.width) + offset.x,
+                y: self.frame.height * (1 + scale.height) + offset.y
+            )
+        )
+        self.clipsToBounds = false
+        self.layer.masksToBounds = false
+        self.layer.shadowPath = shadowPath.cgPath
+        self.layer.shadowRadius = 0
+        self.layer.shadowOffset = .zero
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowColor = shadowColor.cgColor
+    }
+    
+    func CurvedShadows(curve:CGFloat, shadowOpacity:Float , shadowColor:UIColor)  {
+        let shadowPath = UIBezierPath()
+        shadowPath.move(to: CGPoint.zero)
+        shadowPath.addLine(to: CGPoint(
+            x: self.frame.width,
+            y: 0
+        ))
+        shadowPath.addLine(to: CGPoint(
+            x: self.frame.width,
+            y: self.frame.height + curve
+        ))
+        shadowPath.addCurve(
+            to: CGPoint(
+                x: 0,
+                y: self.frame.height + curve
+            ),
+            controlPoint1: CGPoint(
+                x: self.frame.width,
+                y: self.frame.height
+            ),
+            controlPoint2: CGPoint(
+                x: 0,
+                y: self.frame.height
+            )
+        )
+        self.clipsToBounds = false
+        self.layer.masksToBounds = false
+        self.layer.shadowPath = shadowPath.cgPath
+        self.layer.shadowRadius = 10
+        self.layer.shadowOffset = CGSize(width: 0, height: 10)
+        self.layer.shadowOpacity = shadowOpacity
+        self.layer.shadowColor = shadowColor.cgColor
+
     }
     
     func drawCustomShape(fillColor:UIColor) {
         let cornerRadius: CGFloat = 0
-        let shapeOffset = self.frame.size.height * 0.2
+        _ = self.frame.size.height * 0.2
         
         //create shape layer
         let shapeLayer = CAShapeLayer()
@@ -632,6 +767,12 @@ extension UIViewController {
     
     @objc func dismissKeyboard() {
         view.endEditing(true)
+    }
+}
+
+extension Array where Element: Comparable {
+    func containsSameElements(as other: [Element]) -> Bool {
+        return  self.sorted() == other.sorted()
     }
 }
 

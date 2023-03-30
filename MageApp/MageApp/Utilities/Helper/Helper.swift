@@ -7,8 +7,9 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 @objc class MegaAppHelper: NSObject {
-    func openAlertControllerWithControler(controller:UIViewController,
+    func openAlertControllerWithControler(controller:UIViewController?,
                                           title:String?,
                                           message:String?,
                                           styleAlert:UIAlertController.Style,
@@ -23,8 +24,22 @@ import UIKit
         if (NoTitle != nil) {
             alertController.addAction(UIAlertAction(title: NoTitle, style: styleNoAction!, handler: handerNoAction))
         }
-        controller .present(alertController, animated: true)
+        if (controller == nil) {
+            UIApplication.shared.keyWindow!.rootViewController? .present(alertController, animated: true)
+        } else {
+            controller? .present(alertController, animated: true)
+        }
+        
     }
 }
 
+struct ContentView : View {
+    var body: some View {
+        HStack {
+            Text("Introducing")
+                .font(.title)
+            Text("A Demo App")
+        }
+    }
+}
 
